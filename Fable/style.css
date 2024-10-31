@@ -1,13 +1,13 @@
 body
 *{
     margin: 0;
-    padding: 0;
+    padding: 100;
     box-sizing: border-box;
     outline: none;
 }
 body{
     overflow-x: hidden;
-    background: red;
+    background: white;
 
 }
 header{
@@ -15,8 +15,13 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100;
-    padding: 0 249px;
-    border-bottom: 1px solid #dbdbdb;
+    padding: 0 149px;
+    border-bottom: 1px solid #9A7B6C;
+    padding-top: 5px;
+    background-color: #81CAE9 ;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+
 }
 header ul li{
     display: inline-block;
@@ -28,21 +33,21 @@ header ul li:last-child{
 }
 header ul li a{
     text-decoration: none;
-    color: green;
-    padding: 22px 0;
+    color: white;
+    padding: 30px 0;
     display: inline-block;
     transition: all ease 0.3s;
     font-size: 18px;
 }
 header ul li a:hover{
-    color: red;
+    color: #656839;
 }
 /* Drop down menu style */
 header ul .submenu{
     position: absolute;
     width: 200px;
-    background-color:orange;
-    box-shadow: 0 20px 45px green;
+    background-color: #81CAE9;
+    box-shadow: 0 20px 45px #C0C781;
     margin-top: -50px;
     opacity: 0;
     z-index: -999;
@@ -68,3 +73,4 @@ header ul .submenu li a{
     align-items: center;
     height: 100vh;
 }
+h1 {text-align: center;}
