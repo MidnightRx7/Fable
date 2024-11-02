@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.21.1",
+    "expressjs": "^1.0.1"
+  },
+  "name": "fable-1",
+  "version": "1.0.0",
+  "description": "VEI Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MidnightRx7/Fable.git"
+  },
+  "author": "MidnightRx7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MidnightRx7/Fable/issues"
+  },
+  "homepage": "https://github.com/MidnightRx7/Fable#readme"
+}
