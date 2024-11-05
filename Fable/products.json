@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Large Succulent Kit",
+        "id": "Large-Succulent-Kit",
+        "description": "more products",
+        "image": "#",       
+        "price": "$24.99",
+        "tags": ["kit", "plants", "pot", "toys"],
+        "button": "https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/"
+    },
+    {
+        "title": "Regular Succulent Kit",
+        "id": "Regular-Succulent-Kit",
+        "description": "more products",
+        "image": "#",       
+        "price": "$19.99",
+        "tags": ["kit", "plants", "pot", "toys"],
+        "button": "https://portal.veinternational.org/buybuttons/us016132/btn/regular-succulent-kit-002/"
+    }
+]

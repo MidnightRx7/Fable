@@ -1,18 +1,96 @@
-/* @font-face {
-    font-family: "ltc-artscript-pro", sans-serif;
-    
+   @import url("https://p.typekit.net/p.css?s=1&k=iyo5rml&ht=tk&f=50461.54988.54989.54990.54991.54992.54993.54994.54995.58306.58309.58310&a=217954793&app=typekit&e=css");
+
+   @font-face {
+   font-family:"ltc-artscript-pro";
+   src:url("https://use.typekit.net/af/d40c9c/00000000000000007736d88e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/d40c9c/00000000000000007736d88e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/d40c9c/00000000000000007736d88e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/0f9ac4/0000000000000000774d1e09/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/0f9ac4/0000000000000000774d1e09/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/0f9ac4/0000000000000000774d1e09/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/fdac18/0000000000000000774d1dfe/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/fdac18/0000000000000000774d1dfe/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/fdac18/0000000000000000774d1dfe/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:500;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/e29b09/0000000000000000774d1e08/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/e29b09/0000000000000000774d1e08/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/e29b09/0000000000000000774d1e08/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:500;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/049b31/0000000000000000774d1e03/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/049b31/0000000000000000774d1e03/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/049b31/0000000000000000774d1e03/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i6&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:600;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/38d739/0000000000000000774d1e0c/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/38d739/0000000000000000774d1e0c/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/38d739/0000000000000000774d1e0c/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/5b8bf0/0000000000000000774d1e01/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/5b8bf0/0000000000000000774d1e01/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/5b8bf0/0000000000000000774d1e01/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/b1564b/0000000000000000774d1e00/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/b1564b/0000000000000000774d1e00/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/b1564b/0000000000000000774d1e00/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"ibarra-real-nova";
+   src:url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nicholas";
+   src:url("https://use.typekit.net/af/019c71/00000000000000007757570f/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/019c71/00000000000000007757570f/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/019c71/00000000000000007757570f/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+   font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nicholas";
+   src:url("https://use.typekit.net/af/1bf7f8/00000000000000007757570e/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/1bf7f8/00000000000000007757570e/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/1bf7f8/00000000000000007757570e/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+   }
+   
+   @font-face {
+   font-family:"nicholas";
+   src:url("https://use.typekit.net/af/083d70/000000000000000077575710/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/083d70/000000000000000077575710/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/083d70/000000000000000077575710/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+   font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+   }
+   
+   .tk-ltc-artscript-pro { font-family: "ltc-artscript-pro",sans-serif; }
+   .tk-ibarra-real-nova { font-family: "ibarra-real-nova",sans-serif; }
+   .tk-nicholas { font-family: "nicholas",sans-serif; }
+p{
+    font-family: "ibarra-real-nova", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-   */
-
-body
-*{
-    margin: 0;
-    padding: 100;
-    box-sizing: border-box;
-    outline: none;
 }
+body 
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    flex-grow: 1;
+}
+
 body{
     overflow-x: hidden;
     background: white;
@@ -23,18 +101,22 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100;
-    padding: 0 149px;
-    border-bottom: 1px solid #9A7B6C;
-    padding-top: 5px;
-    background-color: #81CAE9 ;
+    padding: 0 0px;
+    padding-top: 25px;
+    background-color: rgb(223, 70, 70) ;
     padding-bottom: 5px;
     margin-bottom: 20px;
 
 }
+.logo img {
+    position: absolute;
+    left: 800px;
+    top: 40px;
+}
 header ul li{
     display: inline-block;
     list-styLe: none;
-    margin: 0 30px;
+    margin: 0 25px;
 }
 header ul li:last-child{
     margin-right: 0;
@@ -42,27 +124,27 @@ header ul li:last-child{
 header ul li a{
     text-decoration: none;
     color: white;
-    padding: 30px 0;
+    padding: 50px 0;
     display: inline-block;
     transition: all ease 0.3s;
     font-size: 18px;
 }
 header ul li a:hover{
-    color: #656839;
+    color: #0c2443;
 }
 /* Drop down menu style */
 header ul .submenu{
     position: absolute;
     width: 200px;
-    background-color: #81CAE9;
-    box-shadow: 0 20px 45px #C0C781;
+    background-color: #06364b;
+    box-shadow: 0 20px 45px #252f7a;
     margin-top: -50px;
     opacity: 0;
-    z-index: -999;
+    z-index: -1;
     transition: all ease 0.5s;
 } 
 header ul li:hover .submenu{
-    z-index: 99;
+    z-index: 10;
     opacity: 1;
     margin-top: 0;
 }
@@ -74,7 +156,8 @@ header ul .submenu li a{
     padding: 15px 20px;
     display: inline-block;
     width: 100%;
-}
+} 
+
 .hero_sec{
     display: flex;
     justify-content: center;
@@ -82,3 +165,164 @@ header ul .submenu li a{
     height: 100vh;
 }
 h1 {text-align: center;}
+
+ .middle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center products in the middle container */
+    padding: 5px;
+}
+.prod{
+    /* border: 1px solid #000000; */
+    /* background-color: #E8FDFF; */
+    border-radius: 20px;
+    width: 20%;
+    aspect-ratio: 1/2;
+    padding: 40px
+  }
+/* Individual product card styles */
+.product {
+    width: 350px; /* Width for each product card */
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #f9f9f9; /* Default background; replaced by JS */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer; /* Change cursor on hover */
+    padding: 40px 40px 40px; /* Controls inner padding of the entire product card */
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.product h1 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+.product p {
+    font-size: 1em;
+    color: #777;
+    gap: 100px;
+}
+
+/* Hover effect for product cards */
+.product:hover {
+    transform: translateY(-5px); /* Lifts product card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+}
+
+/* Styling for the break element (optional) */
+.break {
+    width: 100%;
+    height: 20px; /* Controls vertical space between rows */
+    background: transparent;
+}
+  .button {
+    /* background-color: #FFC800; */
+    border: none;
+    border-radius: 20px; 
+    background-color: #ffc80000;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button a{
+    color: #C94277 ;
+}
+.button a {
+    position: relative;
+    color: #C94277;
+    text-decoration: none;
+}
+  
+.button a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #C94277;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+  }
+
+.button a:hover::before {
+    transform: scaleX(1);
+}
+.headeror {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+  }
+  .container {
+    display: grid;
+    grid-gap: 10px; 
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: 2000px;
+}
+
+.color-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+/* Size Variations */
+.color-box.large {
+    background-color: #FF6F61; /* Coral */
+    grid-column: span 2; /* Large box spans two columns */
+    grid-row: span 70; /* Large box spans two rows */
+}
+.color-box.large2 {
+    background-color: #FF6F61; /* Coral */
+    grid-column: span 8; /* Large box spans two columns */        
+    grid-row: span 70; /* Large box spans two rows */
+}
+
+.color-box.medium {
+    background-color: #6B5B93;
+    grid-column: span  2; /* Large box spans two columns */
+    grid-row: span 35; /* Large box spans two rows */
+}
+.color-box.medium2 {
+    background-color: #6B5B93;
+    grid-column: span  3; /* Large box spans two columns */
+    grid-row: span 35; /* Large box spans two rows */
+}
+.color-box.small {
+    background-color: #88B04B;
+    grid-column: span  1;
+    grid-row: span 35; 
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: purple;
+    color: green;        
+    text-align: center;
+}
