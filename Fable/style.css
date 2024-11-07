@@ -103,7 +103,7 @@ header{
     width: 100;
     padding: 0 0px;
     padding-top: 25px;
-    background-color: rgb(223, 70, 70) ;
+    background-color: #F7F0D4;
     padding-bottom: 5px;
     margin-bottom: 20px;
 
@@ -123,7 +123,7 @@ header ul li:last-child{
 }
 header ul li a{
     text-decoration: none;
-    color: white;
+    color: #043C36;
     padding: 50px 0;
     display: inline-block;
     transition: all ease 0.3s;
@@ -136,8 +136,8 @@ header ul li a:hover{
 header ul .submenu{
     position: absolute;
     width: 200px;
-    background-color: #06364b;
-    box-shadow: 0 20px 45px #252f7a;
+    background-color: #F7F0D4;
+    box-shadow: 0 20px 45px #0c2443;
     margin-top: -50px;
     opacity: 0;
     z-index: -1;
@@ -279,10 +279,13 @@ h1 {text-align: center;}
     max-width: 2000px;
 }
 
+/* Box styling */
 .color-box {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; 
+    padding: 10px;
     color: white;
     font-weight: bold;
     border-radius: 8px;
@@ -292,37 +295,85 @@ h1 {text-align: center;}
 
 /* Size Variations */
 .color-box.large {
-    background-color: #FF6F61; /* Coral */
+    background-color: #548F72; /* Coral */
+    grid-row: span 70;
     grid-column: span 2; /* Large box spans two columns */
-    grid-row: span 70; /* Large box spans two rows */
+}
+
+/* Image styling */
+.color-box img {
+    width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.color-box button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.color-box button:hover {
+    background-color: #555;
 }
 .color-box.large2 {
-    background-color: #FF6F61; /* Coral */
+    background-color: #C398C7; /* Coral */
     grid-column: span 8; /* Large box spans two columns */        
-    grid-row: span 70; /* Large box spans two rows */
+    grid-row: span 40; /* Large box spans two rows */
 }
 
 .color-box.medium {
-    background-color: #6B5B93;
+    background-color: #F7F0D4;
     grid-column: span  2; /* Large box spans two columns */
     grid-row: span 35; /* Large box spans two rows */
 }
 .color-box.medium2 {
     background-color: #6B5B93;
-    grid-column: span  3; /* Large box spans two columns */
-    grid-row: span 35; /* Large box spans two rows */
+    grid-column: span  3; 
+    grid-row: span 35; 
 }
 .color-box.small {
-    background-color: #88B04B;
+    background-color: #A35FAB;
     grid-column: span  1;
     grid-row: span 35; 
 }
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: purple;
-    color: green;        
+    margin-top: 20px;
+    width: 70%;
+    padding: 100px 15%;
+    background: #F7F0D4;
+    color: #043C36;
+    display: flex;
+}
+.footer div{
     text-align: center;
+}
+.col-2{
+    flex-grow: 2;
+}
+.footer div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: #043C36;
+    margin-bottom: 10px;
+}
+.footer .col-2 .logo2 {
+    margin-top: 10px;
+}
+
+.footer .col-2 .logo2 img {
+    width: 150px;
+    height: auto;
 }
