@@ -53,10 +53,6 @@
    src:url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/c8b9ca/0000000000000000774d1e04/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
    }
-h1{
-    font-family: "ltc-artscript-pro", sans-serif;
-    font-weight: 600;
-}
 p{
     font-family: "ibarra-real-nova", sans-serif;
     font-weight: 400;
@@ -362,4 +358,17 @@ header ul .submenu li a{
 .footer .col-2 .logo2 img {
     width: 150px;
     height: auto;
+}
+.middle {
+    display: flex;
+    padding-bottom: 20px;
+    /* border: 5px solid #000000;  */
+    border-radius: 5px; 
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
