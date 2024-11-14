@@ -413,7 +413,7 @@ HEAD
 }
 .contact-form button:hover {
     background-color: green;
-
+}
 .container {
     display: grid;
     grid-gap: 10px; 
@@ -430,5 +430,14 @@ HEAD
     display: flex;
     background-color: #043C36;
     width: 10%;
-    }
+}
+.circle-image {
+    width: 300px;  
+    height: 300px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    background-color: #043C36;
+    padding: 3px;
+    margin: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
