@@ -6,44 +6,83 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    <title>Fable | About Us</title>
    <link rel="icon" type="image/x-icon" href = "PictorialLogo.png">
 </head>
     <!-- BEGIN NAVIGARION BAR  -->
     <main>
-       <header>
-           <div style="width: 33.33%;">
-               <nav>
-                   <ul>
-                   <li><a href="index.html">Home</a></li>
-                   <li><a href="shop.html">Shop</a>
-                       <ul class="submenu">
-                           <li><a href="#">Shop All</a></li>
-                           <li><a href="#">Succelents</a></li>
-                           <li><a href="#">Pots</a></li>
-                           <li><a href="#">Accessories</a></li>
-                           <li><a href="bundle.html">Bundle</a></li>
-                       </ul>
-                   </li>
-                   <li><a href="about_us.html">About Us</a>
-                   <ul class="submenu">
-                       <li><a href="#">About Us</a></li>
-                       <li><a href="#">Social Media</a></li>
-                       <li><a href="#">Learn More</a></li>
-                       </ul>
-                   </li>
-                   <li><a href="contact_us.html">Contact Us</a></li>
-                   </ul>     
-               </nav>
-           </div>
-           <div style="width: 33.33%; text-align: center;">
-               <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
-           </div>
-           <div style="width: 33.33%;">
-               <!-- add search bar here -->
-           </div>
-       </header>
-   </main>  
+        <header>
+            <div style="width: 33.33%;">
+                <nav>
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a>
+                        <ul class="submenu">
+                            <li><a href="#">Shop All</a></li>
+                            <li><a href="#">Succelents</a></li>
+                            <li><a href="#">Pots</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="bundle.html">Bundle</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about_us.html">About Us</a>
+                    <ul class="submenu">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Social Media</a></li>
+                        <li><a href="#">Learn More</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    </ul>      
+                </nav>
+            </div>
+            <div style="width: 33.33%; text-align: center;">
+                <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
+            </div>
+            <div style="width: 33.33%;">
+                <div class="center">
+                    <div class="box">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <div id="searchResults" class="search-results"></div>
+                        <script> document.addEventListener('DOMContentLoaded', function () {
+                            const searchInput = document.querySelector('.box input');
+                            const searchResults = document.getElementById('searchResults');
+                            const searchBox = document.querySelector('.box');
+                        
+                            // Show search results when typing
+                            searchInput.addEventListener('input', function () {
+                                searchResults.style.display = 'block'; // Show the dropdown
+                            });
+                        
+                            // Show search results when hovering over the search bar
+                            searchBox.addEventListener('mouseenter', function () {
+                                if (searchInput.value.trim()) { // Only show results if there's text in the input
+                                    searchResults.style.display = 'block';
+                                }
+                            });
+                        
+                            // Hide search results when mouse leaves the search bar
+                            searchBox.addEventListener('mouseleave', function () {
+                                searchResults.style.display = 'none'; // Hide the dropdown
+                            });
+                        
+                            // Hide search results when clicking outside of the search bar
+                            document.addEventListener('click', function (event) {
+                                if (!event.target.closest('.box')) {
+                                    searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
+                                }
+                            });
+                        });</script>
+                    </div>    
+                    <script src="search.js"></script>
+                </div>
+            </div>
+        </header>
+    </main>   
 <body>
     <div class="middle">
         <div class = "side">
@@ -64,30 +103,31 @@
 
         </div>
     </div>   
-   <div class="footer">
-       <div class ="col-1">
-           <h3>Catolog</h3>
-           <a href="#"> Bundle</a>
-           <a href="#"> Succulent</a>
-           <a href="#"> Pots</a>
-           <a href="#"> Accessories</a>
-       </div>
-       <div class="col-2">
-           <h3>Contact</h3>
-           <p>Location, Email, Phone Number</p>
-           <!-- Logo under col-2 contact section -->
-           <div class="logo2">
-               <a href="index.html"><img src="Pictures/Logo2.png" width="200" height="100" /></a>
-           </div>
-           <p> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </p>
-       </div>
-       <div class ="col-1">
-           <h3>About us</h3>
-           <a href="#">LearnMore</a>
-           <a href="#"> Newsletter</a>
-           <a href="#"> Our Mission</a>
-           <a href="#">The Team</a>
-       </div>
-     </div>
+    <div class="footer">
+        <div class ="col-1"> 
+            <h3>Store</h3>
+            <a href="#"> Bundle</a>
+            <a href="#"> Succulent</a>
+            <a href="#"> Pots</a>
+            <a href="#"> Accessories</a>
+        </div>
+        <div class="col-2">
+            <h3>Contact</h3>
+            <h3>1401 Fremont Ave, South Pasadena, CA 91030</h3>
+            <h3> Fable.ca@veinternational.org</h3>
+            <!-- Logo under col-2 contact section -->
+            <div class="logo2">
+                <a href="index.html"><img src="Pictures/Logo2.png" width="200" height="130" /></a>
+                <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </h3>
+            </div>
+        </div>
+        <div class ="col-1"> 
+            <h3>About us</h3>
+            <a href="about_us.html">Learn More</a>
+            <a href="#"> Newsletter</a>
+            <a href="#"> Our Mission</a>
+            <a href="#">The Team</a>
+        </div>
+      </div>
 </body>
 </html>
