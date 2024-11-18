@@ -65,9 +65,9 @@ p1{
     font-style: normal;
 }
 h1{
-    font-family: "ltc-artscript-pro", sans-serif;
-    font-weight: 800;
-    font-size: 50px;
+    font-family: "ibarra-real-nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-style: normal;
     text-align: center;
 }
@@ -96,67 +96,86 @@ body{
     background: white;
 
 }
-header{
+header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    width: 100;
-    padding: 0 0px;
-    padding-top: 25px;
+    width: 100%;
+    padding: 25px 0 5px;
     background-color: #F7F0D4;
-    padding-bottom: 5px;
     margin-bottom: 20px;
+    font-size: 18px;
+    
+}
 
-}
-.logo img {
-    position: relative;
-    /* left: 800px;
-    top: 40px; */
-}
-header ul li{
+header ul li {
     display: inline-block;
-    list-styLe: none;
-    margin: 0 25px;
+    list-style: none;
+    margin: 0 15px;
 }
-header ul li:last-child{
-    margin-right: 0;
-}
-header ul li a{
+
+header ul li a {
     text-decoration: none;
     color: #043C36;
     padding: 50px 0;
     display: inline-block;
     transition: all ease 0.3s;
-    font-size: 18px;
 }
-header ul li a:hover{
+
+header ul li a:hover {
     color: #0c2443;
 }
-/* Drop down menu style */
-header ul .submenu{
+
+.dropdown-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #043C36;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the text and the icon */
+}
+
+.dropdown-toggle:hover {
+    color: #0c2443;
+}
+
+.dropdown-toggle .dropdown-icon {
+    /* Optionally, you can add more padding here to adjust icon positioning */
+    font-size: 18px; /* Ensure the icon size is consistent */
+}
+
+header ul .submenu {
     position: absolute;
     width: 200px;
     background-color: #F7F0D4;
     box-shadow: 0 20px 45px #0c2443;
-    margin-top: -50px;
+    margin-top: 60px; /* Increase this value to lower the submenu */
     opacity: 0;
     z-index: -1;
     transition: all ease 0.5s;
-} 
-header ul li:hover .submenu{
-    z-index: 10;
+    visibility: hidden;
+    pointer-events: none; /* Prevent submenu from interacting when hidden */
+}
+
+header ul .submenu.show {
     opacity: 1;
-    margin-top: 0;
+    z-index: 10;
+    visibility: visible;
+    margin-top: 20px; /* Keep the same value as above to maintain spacing */
+    pointer-events: auto; /* Allow submenu to interact when visible */
 }
-header ul .submenu li{
-    margin: 0;
-    width: 100%;
+/* Rotate the icon when submenu is open */
+header ul .submenu.show + .dropdown-toggle .dropdown-icon i {
+    transform: rotate(180deg); /* Rotate the icon 180 degrees */
 }
-header ul .submenu li a{
+
+header ul .submenu li a {
     padding: 15px 20px;
-    display: inline-block;
-    width: 100%;
-} 
+    display: block;
+}
+
 
 .hero_sec{
     display: flex;
@@ -261,12 +280,23 @@ header ul .submenu li a{
 .containerBox{
     display: grid;
     grid-gap: 10px;
-    padding: 5px;
-    padding-top: 0px;
-    padding-bottom: 40px;
+    padding-top: 20px;    /* Padding on top */
+    padding-bottom: 20px; /* Padding on bottom */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    max-width: 1800px;
+    max-width: 1800 px;
+    margin-left: 50px; /* Add space on the left */
+    margin-right: 50px; /* Add space on the right */
+
  }
+ .containerBox2{
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if needed */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Centers items horizontally */
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px; 
+}
  
  
  /* Box styling */
@@ -307,6 +337,25 @@ header ul .submenu li a{
     transition: background-color 0.2s;
  }
  
+ .inner-box {
+    background-color: #043C36; /* Adjust color */
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%; /* Size as needed */
+    margin-top: 20px; /* Adds spacing from heading */
+    position: absolute; /* Position it within the outer box */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Centers precisely */
+    width: 60%; 
+    height: 300px;
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+}
  
  .color-box button:hover {
     background-color: #555;
@@ -314,17 +363,24 @@ header ul .submenu li a{
  .color-box.large2 {
     background-color: #A35FAB; /* Coral */
     grid-column: span 8; /* Large box spans two columns */       
-    grid-row: span 40; /* Large box spans two rows */
+    grid-row: span 80; /* Large box spans two rows */
+    position: relative; /* Allows positioning of inner box */
+ }
+ .color-box.large3 {
+    background-color: #548F72; /* Coral */
+    grid-column: span 8; /* Large box spans two columns */       
+    grid-row: span 60; /* Large box spans two rows */
+    position: relative; /* Allows positioning of inner box */
  }
  .color-box.large {
-    background-color: #548F72; /* Coral */
+    background-color: #548F72;
     grid-row: span 70;
     grid-column: span 2; /* Large box spans two columns */
  }
  .color-box.medium {
     background-color: #043C36;
-    grid-column: span  2; /* Large box spans two columns */
-    grid-row: span 35; /* Large box spans two rows */
+    grid-column: span  6; /* Large box spans two columns */
+    grid-row: span 70; /* Large box spans two rows */
  }
  .color-box.medium2 {
     background-color: #C398C7;
