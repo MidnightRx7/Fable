@@ -70,7 +70,6 @@ h1{
     font-size: 50px;
     font-style: normal;
     text-align: center;
-
 }
 h2{
     font-family: "ibarra-real-nova", sans-serif;
@@ -381,6 +380,9 @@ header ul .submenu li a{
     justify-content: space-between;
     align-items: flex-start;
     flex-grow: 1;
+    background-color: #548F72;
+    /* "background-color: #548F72 text-decoration-color: #FFFEF9" */
+    -webkit-text-fill-color: #FFFEF9;
 }
 
 .contact-form {
@@ -427,7 +429,7 @@ header ul .submenu li a{
     cursor: pointer; 
 }
 .contact-form button:hover {
-    background-color: green; 
+    background-color: green;
 }
 .container {
     display: grid;
@@ -521,4 +523,14 @@ header ul .submenu li a{
 /* Hover effect for search results */
 .result-item:hover {
     background-color: #F7F0D4;
+}
+.circle-image {
+    width: 300px;  
+    height: 300px; 
+    border-radius: 50%;
+    object-fit: cover; 
+    background-color: #043C36;
+    padding: 3px;
+    margin: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
