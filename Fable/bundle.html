@@ -14,25 +14,27 @@
             <div style="width: 33.33%;">
                 <nav>
                     <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a>
-                        <ul class="submenu">
-                            <li><a href="#">Shop All</a></li>
-                            <li><a href="#">Succelents</a></li>
-                            <li><a href="#">Pots</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="bundle.html">Bundle</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="about_us.html">About Us</a>
-                    <ul class="submenu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">Learn More</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    </ul>      
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                            <ul class="submenu">
+                                <li><a href="shop.html">Shop All</a></li>
+                                <li><a href="#">Succulents</a></li>
+                                <li><a href="#">Pots</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="bundle.html">Bundle</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="dropdown-toggle"><p1>About Us</p1> <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                            <ul class="submenu">
+                                <li><a href="about_us.html">About Us</a></li>
+                                <li><a href="#">Social Media</a></li>
+                                <li><a href="#">Learn More</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
                 </nav>
             </div>
             <div style="width: 33.33%; text-align: center;">
@@ -126,5 +128,44 @@
             <a href="#">The Team</a>
         </div>
       </div>
+      <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent the event from bubbling up to the document
+
+        const submenu = this.nextElementSibling; // Get the corresponding submenu
+        const icon = this.querySelector('.dropdown-icon i'); // Get the icon
+
+        // Close any other open submenus
+        document.querySelectorAll('.submenu').forEach(submenuItem => {
+            if (submenuItem !== submenu) {
+                submenuItem.classList.remove('show'); // Close other submenus
+                submenuItem.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)"; // Reset rotation for other icons
+            }
+        });
+
+        // Toggle the current submenu
+        submenu.classList.toggle('show');
+
+        // Rotate the icon based on submenu visibility
+        if (submenu.classList.contains('show')) {
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            icon.style.transform = "rotate(0deg)";
+        }
+    });
+});
+
+// Close all submenus if clicked outside
+document.addEventListener('click', function(event) {
+    // Check if the click target is not inside any dropdown toggle
+    if (!event.target.closest('.dropdown-toggle')) {
+        document.querySelectorAll('.submenu').forEach(submenu => {
+            submenu.classList.remove('show'); // Close all submenus
+            submenu.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)"; // Reset rotation for all icons
+        });
+    }
+});
+        </script>
 </body>
 </html>
