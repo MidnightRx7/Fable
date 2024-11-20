@@ -105,6 +105,9 @@ header {
     background-color: #F7F0D4;
     margin-bottom: 20px;
     font-size: 18px;
+    border-bottom: 4px solid #043C36
+    ;
+
     
 }
 
@@ -278,6 +281,7 @@ header ul .submenu li a {
     font-size: 30px;
 }
 .containerBox{
+    
     display: grid;
     grid-gap: 10px;
     padding-top: 20px;    /* Padding on top */
@@ -289,6 +293,7 @@ header ul .submenu li a {
 
  }
  .containerBox2{
+    
     display: flex;
     /* flex-wrap: wrap; */
     gap: 20px; /* Space between items */
@@ -306,11 +311,28 @@ header ul .submenu li a {
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+    font-weight: bold;
+    border-radius: 8px;
     color: white;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; 
+ }
+ .color-box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
     font-weight: bold;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; 
  }
  
  
@@ -322,7 +344,15 @@ header ul .submenu li a {
     height: auto;
     border-radius: 4px;
  }
- 
+ .color-box2 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Places the image behind the text */
+}
  
  /* Button styling */
  .color-box button {
@@ -336,7 +366,23 @@ header ul .submenu li a {
     cursor: pointer;
     transition: background-color 0.2s;
  }
- 
+ .color-box2 button {
+    padding: 20px 40px; /* Larger padding for a bigger button */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold;
+    color: white;
+    background-color: #548F72;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+ }
+
+.color-box2 button :hover {
+    background-color: #043C36;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
  .inner-box {
     background-color: #043C36; /* Adjust color */
     padding: 20px;
@@ -360,8 +406,17 @@ header ul .submenu li a {
  .color-box button:hover {
     background-color: #555;
  }
+ .color-box2 button:hover {
+    background-color: #043C36;
+ }
  .color-box.large2 {
-    background-color: #A35FAB; /* Coral */
+    background-color: transparent; /* Ensures no background color on container */
+    grid-column: span 8; /* Large box spans two columns */       
+    grid-row: span 80; /* Large box spans two rows */
+    position: relative; /* Allows positioning of inner box */
+ }
+ .color-box2.large2 {
+    background-color: transparent; /* Ensures no background color on container */
     grid-column: span 8; /* Large box spans two columns */       
     grid-row: span 80; /* Large box spans two rows */
     position: relative; /* Allows positioning of inner box */
@@ -547,20 +602,27 @@ header ul .submenu li a {
 }
 .box input{
     width: 0;
+
     outline: none;
     border: none;
     font-weight: 500;
     transition: 0.8s;
     background: transparent;
+    color: #A35FAB;
+    font-size: 18px;
 }
 .box a .fas{
-    color: #043C36;
+    color: #A35FAB;
     font-size: 18px;
 }
 .search-container {
     position: absolute;
     width: 300px;
     margin: 20px auto;
+}
+.box input::placeholder {
+    color: #C398C7; /* Change this to your desired color */
+    opacity: 1; /* Ensure full opacity for the placeholder color */
 }
 #searchResults {
     display: none; /* Hidden by default */

@@ -3,7 +3,7 @@
         "title": "Large Succulent Kit",
         "id": "Large-Succulent-Kit",
         "description": "more products",
-        "image": "Pictures/Products/BundleL.png",     
+        "image": "Pictures/Products/PlantCharm.png",     
         "price": "$24.99",
         "tags": ["kit", "plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/"
@@ -30,7 +30,7 @@
         "title": "3-Pack Accessories",
         "id": "3-Pack-Accessories",
         "description": "more products",
-        "image": "Pictures/Products/3-Pack Accessories.png", 
+        "image": "Pictures/Products/PlantCharm2.png", 
         "price": "$12.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/3-pack-accessories-004/"
