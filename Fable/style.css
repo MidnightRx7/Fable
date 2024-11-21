@@ -125,7 +125,6 @@ header ul li a {
     display: inline-block;
     transition: all ease 0.3s;
 }
-
 header ul li a:hover {
     color: #0c2443;
 }
