@@ -9,7 +9,7 @@
 
 define('CHUNK_SIZE',1048576);
 
-function simple_file_server($filename='') { 
+function simple_file_server($filename='index.html') { 
   if(!$filename || !($fd = fopen($filename, 'rb'))){
     header('Status: 404');
     return;
