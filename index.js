@@ -4,7 +4,7 @@ const app = express()
 
 app.use(express.static('Fable'))
 
-app.listen(80, () => {
+app.listen(3000, () => {
     console.log("App is listening on port 80")
 })
 
