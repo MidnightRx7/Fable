@@ -10,81 +10,89 @@
    <title>Fable | About Us</title>
    <link rel="icon" type="image/x-icon" href = "PictorialLogo.png">
 </head>
-    <!-- BEGIN NAVIGARION BAR  -->
-    <main>
-        <header>
-            <div style="width: 33.33%;">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
-                            <ul class="submenu">
-                                <li><a href="shop.html">Shop All</a></li>
-                                <li><a href="#">Succulents</a></li>
-                                <li><a href="#">Pots</a></li>
-                                <li><a href="#">Accessories</a></li>
-                                <li><a href="bundle.html">Bundle</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button class="dropdown-toggle"><p1>About Us</p1> <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
-                            <ul class="submenu">
-                                <li><a href="about_us.html">About Us</a></li>
-                                <li><a href="#">Social Media</a></li>
-                                <li><a href="#">Learn More</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div style="width: 33.33%; text-align: center;">
-                <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
-            </div>
-            <div style="width: 33.33%;">
+<main>
+    <header>
+        <div style="width: 33.33%;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                        <ul class="submenu">
+                            <li><a href="shop.html">Shop All</a></li>
+                            <li><a href="#">Succulents</a></li>
+                            <li><a href="#">Pots</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="bundle.html">Bundle</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="dropdown-toggle"><p1>About Us</p1> <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                        <ul class="submenu">
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">Learn More</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="width: 33.33%; text-align: center;">
+            <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
+        </div>
+        <div style="width: 33.33%;">
+            <div class="center">
+                <div class="box">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div id="searchResults" class="search-results"></div>
+                    <script> document.addEventListener('DOMContentLoaded', function () {
+                        const searchInput = document.querySelector('.box input');
+                        const searchResults = document.getElementById('searchResults');
+                        const searchBox = document.querySelector('.box');
+                        // Show search results when typing
+                        searchInput.addEventListener('input', function () {
+                            searchResults.style.display = 'block'; // Show the dropdown
+                        });
+                        // Show search results when hovering over the search bar
+                        searchBox.addEventListener('mouseenter', function () {
+                            if (searchInput.value.trim()) { // Only show results if there's text in the input
+                                searchResults.style.display = 'block';
+                            }
+                        });
+                        // Hide search results when mouse leaves the search bar
+                        searchBox.addEventListener('mouseleave', function () {
+                            searchResults.style.display = 'none'; // Hide the dropdown
+                        });
+                    
+                        // Hide search results when clicking outside of the search bar
+                        document.addEventListener('click', function (event) {
+                            if (!event.target.closest('.box')) {
+                                searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
+                            }
+                        });
+                    });</script>
+                </div>    
+                <script src="search.js"></script>
                 <div class="center">
-                    <div class="box">
-                        <input type="text" id="searchInput" placeholder="Search...">
-                        <a href="#">
-                            <i class="fas fa-search"></i>
+                    <div class="cart-box">
+                        <a href="https://example.com/cart"> <!-- Replace with your actual cart link -->
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <div id="searchResults" class="search-results"></div>
-                        <script> document.addEventListener('DOMContentLoaded', function () {
-                            const searchInput = document.querySelector('.box input');
-                            const searchResults = document.getElementById('searchResults');
-                            const searchBox = document.querySelector('.box');
-                        
-                            // Show search results when typing
-                            searchInput.addEventListener('input', function () {
-                                searchResults.style.display = 'block'; // Show the dropdown
-                            });
-                        
-                            // Show search results when hovering over the search bar
-                            searchBox.addEventListener('mouseenter', function () {
-                                if (searchInput.value.trim()) { // Only show results if there's text in the input
-                                    searchResults.style.display = 'block';
-                                }
-                            });
-                        
-                            // Hide search results when mouse leaves the search bar
-                            searchBox.addEventListener('mouseleave', function () {
-                                searchResults.style.display = 'none'; // Hide the dropdown
-                            });
-                        
-                            // Hide search results when clicking outside of the search bar
-                            document.addEventListener('click', function (event) {
-                                if (!event.target.closest('.box')) {
-                                    searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
-                                }
-                            });
-                        });</script>
-                    </div>    
-                    <script src="search.js"></script>
+                    </div>
+                    <div class="user-box">
+                        <a href="https://example.com/user"> <!-- Replace with your actual user link -->
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </header>
-    </main>   
+        </div>
+    </header>
+</main>    
 <body>
     <div class="middle">
         <div class = "side">
@@ -105,22 +113,22 @@
                 <h1 style="text-align: left;">Chiefs</h1> <!-- CHIEFS -->
                 <div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around; text-align: center;">
                     <div>
-                        <img src="Pictures/people/PeterX.png" class="circle-image" style="background-color: #F7F0D4;">
+                        <img src="Pictures/people/peter.jpg" class="circle-image" style="background-color: #F7F0D4;">
                         <h1>Peter Xie</h1>
                         <p>CEO</p> 
                     </div>
                     <div>
-                        <img src="Pictures/people/PeterX.png" class="circle-image" style="background-color: #F7F0D4;">
+                        <img src="Pictures/people/a.jpg" class="circle-image" style="background-color: #F7F0D4;">
                         <h1>Adam Ruiz</h1>
                         <p>CPO</p>
                     </div>
                     <div>
-                        <img src="Pictures/people/PeterX.png" class="circle-image" style="background-color: #F7F0D4;">
+                        <img src="Pictures/people/ethan.jpg" class="circle-image" style="background-color: #F7F0D4;">
                         <h1>Ethan Kang</h1>
                         <p>CFO</p>
                     </div>
                     <div>
-                        <img src="Pictures/people/PeterX.png" class="circle-image" style="background-color: #F7F0D4;">
+                        <img src="Pictures/people/kayla.jpg" class="circle-image" style="background-color: #F7F0D4;">
                         <h1>Kayla Johnson</h1>
                         <p>CMO</p>
                     </div>

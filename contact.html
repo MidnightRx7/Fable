@@ -52,19 +52,16 @@
                             const searchInput = document.querySelector('.box input');
                             const searchResults = document.getElementById('searchResults');
                             const searchBox = document.querySelector('.box');
-                        
                             // Show search results when typing
                             searchInput.addEventListener('input', function () {
                                 searchResults.style.display = 'block'; // Show the dropdown
                             });
-                        
                             // Show search results when hovering over the search bar
                             searchBox.addEventListener('mouseenter', function () {
                                 if (searchInput.value.trim()) { // Only show results if there's text in the input
                                     searchResults.style.display = 'block';
                                 }
                             });
-                        
                             // Hide search results when mouse leaves the search bar
                             searchBox.addEventListener('mouseleave', function () {
                                 searchResults.style.display = 'none'; // Hide the dropdown
@@ -79,10 +76,22 @@
                         });</script>
                     </div>    
                     <script src="search.js"></script>
+                    <div class="center">
+                        <div class="cart-box">
+                            <a href="https://example.com/cart"> <!-- Replace with your actual cart link -->
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                        <div class="user-box">
+                            <a href="https://example.com/user"> <!-- Replace with your actual user link -->
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
-    </main>  
+    </main>   
 <body>
     <div class="contact-form">
         <h1>Contact Us</h1>
