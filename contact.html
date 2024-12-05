@@ -92,24 +92,23 @@
             </div>
         </header>
     </main>   
-<body>
-    <div class="contact-form">
-        <h1>Contact Us</h1>
-        <form action="submit_form.php" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone">
-
-            <label for="comment">Comment</label>
-            <textarea id="comment" name="comment"></textarea>
-
-            <button type="submit">Send</button>
+<body style="background-color: #C398C7;"></body>
+    <div class="contact-container"> 
+        <form action="" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Contact Us</h2>
+                <hr>
+            </div>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit</button>
+            <!-- <img src="Pictures/Screenshot_2024-11-18_115121-removebg-preview.png" alt=""> -->
+            <!-- incase we want to add an image inside the button -->
         </form>
+        <div class="contact-right">
+            <img src="Pictures/mushroom.png" alt="">
+        </div>
     </div>
     <div class="footer">
         <div class ="col-1"> 
