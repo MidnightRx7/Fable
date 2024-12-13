@@ -8,98 +8,93 @@
     <title>Fable | Shop</title>
     <link rel="icon" type="image/x-icon" href = "PictorialLogo.png">
 </head>
-     <!-- BEGIN NAVIGARION BAR  -->
-     <main>
-        <header>
-            <div style="width: 33.33%;">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>
-                            <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
-                            <ul class="submenu">
-                                <li><a href="shop.html">Shop All</a></li>
-                                <li><a href="#">Succulents</a></li>
-                                <li><a href="#">Pots</a></li>
-                                <li><a href="#">Accessories</a></li>
-                                <li><a href="bundle.html">Bundle</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button class="dropdown-toggle"><p1>About Us</p1> <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
-                            <ul class="submenu">
-                                <li><a href="about_us.html">About Us</a></li>
-                                <li><a href="#">Social Media</a></li>
-                                <li><a href="#">Learn More</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div style="width: 33.33%; text-align: center;">
-                <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
-            </div>
-            <div style="width: 33.33%;">
+<main>
+    <header>
+        <div style="width: 33.33%;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                        <ul class="submenu">
+                            <li><a href="shop.html">Shop All</a></li>
+                            <li><a href="bundle.html">Bundle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="dropdown-toggle"><p1>About Us</p1> <span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
+                        <ul class="submenu">
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">Learn More</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div style="width: 33.33%; text-align: center;">
+            <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
+        </div>
+        <div style="width: 33.33%;">
+            <div class="center">
+                <div class="box">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div id="searchResults" class="search-results"></div>
+                    <script> document.addEventListener('DOMContentLoaded', function () {
+                        const searchInput = document.querySelector('.box input');
+                        const searchResults = document.getElementById('searchResults');
+                        const searchBox = document.querySelector('.box');
+                        // Show search results when typing
+                        searchInput.addEventListener('input', function () {
+                            searchResults.style.display = 'block'; // Show the dropdown
+                        });
+                        // Show search results when hovering over the search bar
+                        searchBox.addEventListener('mouseenter', function () {
+                            if (searchInput.value.trim()) { // Only show results if there's text in the input
+                                searchResults.style.display = 'block';
+                            }
+                        });
+                        // Hide search results when mouse leaves the search bar
+                        searchBox.addEventListener('mouseleave', function () {
+                            searchResults.style.display = 'none'; // Hide the dropdown
+                        });
+                    
+                        // Hide search results when clicking outside of the search bar
+                        document.addEventListener('click', function (event) {
+                            if (!event.target.closest('.box')) {
+                                searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
+                            }
+                        });
+                    });</script>
+                </div>    
+                <script src="search.js"></script>
                 <div class="center">
-                    <div class="box">
-                        <input type="text" id="searchInput" placeholder="Search...">
-                        <a href="#">
-                            <i class="fas fa-search"></i>
+                    <div class="cart-box">
+                        <a href="https://example.com/cart"> <!-- Replace with your actual cart link -->
+                            <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <div id="searchResults" class="search-results"></div>
-                        <script> document.addEventListener('DOMContentLoaded', function () {
-                            const searchInput = document.querySelector('.box input');
-                            const searchResults = document.getElementById('searchResults');
-                            const searchBox = document.querySelector('.box');
-                            // Show search results when typing
-                            searchInput.addEventListener('input', function () {
-                                searchResults.style.display = 'block'; // Show the dropdown
-                            });
-                            // Show search results when hovering over the search bar
-                            searchBox.addEventListener('mouseenter', function () {
-                                if (searchInput.value.trim()) { // Only show results if there's text in the input
-                                    searchResults.style.display = 'block';
-                                }
-                            });
-                            // Hide search results when mouse leaves the search bar
-                            searchBox.addEventListener('mouseleave', function () {
-                                searchResults.style.display = 'none'; // Hide the dropdown
-                            });
-                        
-                            // Hide search results when clicking outside of the search bar
-                            document.addEventListener('click', function (event) {
-                                if (!event.target.closest('.box')) {
-                                    searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
-                                }
-                            });
-                        });</script>
-                    </div>    
-                    <script src="search.js"></script>
-                    <div class="center">
-                        <div class="cart-box">
-                            <a href="https://example.com/cart"> <!-- Replace with your actual cart link -->
-                                <i class="fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="user-box">
-                            <a href="https://example.com/user"> <!-- Replace with your actual user link -->
-                                <i class="fas fa-user"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="user-box">
+                        <a href="https://example.com/user"> <!-- Replace with your actual user link -->
+                            <i class="fas fa-user"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </header>
-    </main>   
+        </div>
+    </header>
+</main> 
 <body>
     <div style=" display: flex; flex-direction: row; flex-wrap: nowrap;">
         <div class="sidebar" style="width: 20%;"> 
             <h1 class="sidebar-sec" style=" background-color: #A35FAB; border-radius: 15px;">Sort By:</h1>
             <div class="sidebar-sec" style=" background-color: #fff;">
                 <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Kits</p>
-                <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Succulents</p>
-                <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Pots</p>
                 <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Accessories</p>
             </div>
             <br>

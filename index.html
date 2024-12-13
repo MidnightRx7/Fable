@@ -19,10 +19,8 @@
                             <button class="dropdown-toggle"><p1>Shop</p1><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span></button>
                             <ul class="submenu">
                                 <li><a href="shop.html">Shop All</a></li>
-                                <li><a href="#">Succulents</a></li>
-                                <li><a href="#">Pots</a></li>
-                                <li><a href="#">Accessories</a></li>
                                 <li><a href="bundle.html">Bundle</a></li>
+                                <li><a href="#">Accessories</a></li>
                             </ul>
                         </li>
                         <li>
@@ -99,11 +97,178 @@
                 <!-- <button onclick="window.location.href='shop.html'">View Now</button> -->
         </div>
     </div>
-            <h1> Best Sellers</h1>
+    <div class="fable-box">
+        <h2 class="fable-title">Greetings and Salutations</h2>
+        <div class="fable-content">
+            <div class="fable-section">
+                <p>Lorem ipsum dolor sit amet. Ea odio temporibus et vero veritatis eos commodi voluptatem eum veniam autem eos quaerat quidem sed nihil impedit. At commodi galisum ut exercitationem numquam est maiores repellendus 33 ipsa harum vel praesentium ipsa? Qui fuga quia sed facere iste non omnis esse qui accusamus voluptate cum excepturi accusamus non quidem nisi.</p>
+            </div>
+            <div class="fable-section">
+                <p>Lorem ipsum dolor sit amet. Ea odio temporibus et vero veritatis eos commodi voluptatem eum veniam autem eos quaerat quidem sed nihil impedit. At commodi galisum ut exercitationem numquam est maiores repellendus 33 ipsa harum vel praesentium ipsa? Qui fuga quia sed facere iste non omnis esse qui accusamus voluptate cum excepturi accusamus non quidem nisi.</p>
+            </div>
+            <div class="fable-section">
+                <p>Lorem ipsum dolor sit amet. Ea odio temporibus et vero veritatis eos commodi voluptatem eum veniam autem eos quaerat quidem sed nihil impedit. At commodi galisum ut exercitationem numquam est maiores repellendus 33 ipsa harum vel praesentium ipsa? Qui fuga quia sed facere iste non omnis esse qui accusamus voluptate cum excepturi accusamus non quidem nisi.</p>
+            </div>
+            <div class="fable-section">
+                <h4>Hello</h4>
+                <p>Lorem ipsum dolor sit amet. Ea odio temporibus et vero veritatis eos commodi voluptatem eum veniam autem eos quaerat quidem sed nihil impedit. At commodi galisum ut exercitationem numquam est maiores repellendus 33 ipsa harum vel praesentium ipsa? Qui fuga quia sed facere iste non omnis esse qui accusamus voluptate cum excepturi accusamus non quidem nisi.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CSS for the layout -->
+    <style>
+.fable-box {
+    grid-gap: 10px;
+    padding-top: 20px;    /* Padding on top */
+    padding-bottom: 20px; /* Padding on bottom */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: 1800 px;
+    margin-left: 50px; /* Add space on the left */
+    margin-right: 50px; /* Add space on the right */
+    background-color: #043C36; /* Light gray background color */
+    
+}
+
+
+.fable-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #F7F0D4; /* Title color */
+    text-align: center;
+}
+
+.fable-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0;
+}
+
+.fable-section {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px; /* Ensure sections don't stretch too much */
+    padding: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.fable-section p {
+    font-size: 16px;
+    color: #F7F0D4;
+    word-wrap: break-word; /* Ensure long words break and wrap */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .fable-content {
+        flex-direction: column; /* Stack the sections vertically on smaller screens */
+        gap: 15px;
+    }
+
+    .fable-section {
+        min-width: 100%; /* Ensure sections take up full width when stacked */
+        padding: 10px;
+    }
+}
+        @media screen and (max-width: 1440px) and (min-width: 900px) {
+            div {
+                flex-direction: row;  /* Keep items in row layout on 14-inch screens */
+                align-items: center;  /* Ensure they are centered */
+                gap: 20px;  /* Moderate gap between items */
+            }
+    
+            .category img {
+                width: 350px;  /* Adjust image width slightly for better fit */
+                height: 450px;  /* Adjust image height to keep proportions */
+            }
+    
+            .category h1 {
+                font-size: 28px;  /* Resize the heading to match the layout */
+            }
+        }
+    
+        @media screen and (max-width: 900px) {
+            div {
+                flex-direction: column;  /* Stack items vertically on smaller screens */
+                align-items: center;  /* Ensure they are centered */
+                gap: 30px;  /* Increase gap between items */
+            }
+    
+            .category img {
+                width: 300px;  /* Resize images on smaller screens */
+                height: 400px;  /* Adjust height of images */
+            }
+    
+            .category h1 {
+                font-size: 24px;  /* Adjust font size of h1 on small screens */
+            }
+        }
+    </style>
+
+    <script>
+        // Optionally, if you want to dynamically load product categories based on available data, use this section.
+        // For now, this basic approach uses hardcoded categories (pots, plants, accessories).
+    </script>
+            <h5>Featured Products</h5>
+            <h4>Shop selected items</h4>
             <div class="middleproducts" style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
             </div>
-            
                 </div>
+                <div style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+                    <div class="middleproducts" style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+                    </div>
+                </div> 
+            
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const listEl = document.querySelector('.middleproducts');
+                        const colors = ['#548F72']; // Define a color palette
+            
+                        // Counter to limit the displayed products to 4
+                        let displayedCount = 0;
+            
+                        fetch("./products.json")
+                            .then(res => {
+                                if (!res.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return res.json();
+                            })
+                            .then(data => {
+                                data.forEach((product, index) => {
+                                    if (displayedCount < 4) { // Limit the number of products
+                                        const randomColorIndex = Math.floor(Math.random() * colors.length);
+                                        const bgColor = colors[randomColorIndex];
+            
+                                        const productHTML = `
+                                            <div class="product" id="productDiv${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden;">
+                                                <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
+                                                <div style="background-color: ${bgColor}; padding: 10px; width: 100%; box-sizing: border-box; margin-top: 10px;">
+                                                    <h1 style="margin: 0; color: white;">${product.title}</h1>
+                                                    <p style="margin: 10px 0 0; color: white;">${product.price}</p>
+                                                </div>
+                                            </div>`;
+                                        listEl.insertAdjacentHTML('beforeend', productHTML);
+            
+                                        const productDiv = document.getElementById(`productDiv${index}`);
+                                        productDiv.addEventListener('click', function() {
+                                            window.location.href = `product.html?id=${encodeURIComponent(product.id)}`;
+                                        });
+            
+                                        displayedCount++; // Increment the counter for displayed products
+                                    }
+                                });
+                            })
+                            .catch(error => {
+                                console.error('Error fetching product data:', error);
+                                listEl.innerHTML = '<p style="color: red;">Failed to load products. Please try again later.</p>';
+                            });
+                    });
+                </script>
         </body>
         <div class="footer">
             <div class ="col-1"> 
