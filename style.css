@@ -541,6 +541,12 @@ header ul .submenu li a {
     /* "background-color: #548F72 text-decoration-color: #FFFEF9" */
     -webkit-text-fill-color: #FFFEF9;
 }
+.middleproducts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the number of columns */
+    gap: 15px;  /* Space between the items */
+    justify-items: center;  /* Align items in the center */
+}
 
 .container {
     display: grid;
@@ -891,4 +897,68 @@ header ul .submenu li a {
 
 .buy-button:hover a {
     color: #548F72; /* Changes text color to green when hovered */
+}
+.containerBox {
+    display: grid;
+    grid-gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    max-width: 1800px;
+    margin-left: 50px;
+    margin-right: 50px;
+    overflow: hidden; /* Ensures sliding images stay within bounds */
+}
+
+/* Existing styles for color-box2.large2 */
+.color-box2.large2 {
+    background-color: transparent;
+    grid-column: span 8;
+    grid-row: span 80;
+    position: relative;
+}
+
+/* Additional styles for sliding images */
+.color-box2.large2 img {
+    position: absolute;
+    width: 100%; /* Ensure the image fits the container */
+    height: 100%; /* Maintain consistent height */
+    top: 0;
+    left: 0; /* Default position */
+    transform: translateX(100%); /* Start off-screen for first slide */
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+    z-index: 1; /* Ensure proper stacking */
+}
+
+.color-box2.large2 img.active {
+    transform: translateX(0); /* Bring the active image into view */
+    z-index: 2; /* Active image appears above */
+}
+
+.color-box2.large2 img.inactive-left {
+    transform: translateX(-100%); /* Move inactive image out to the left */
+    z-index: 1; /* Place it behind the active image */
+}
+
+.color-box2.large2 img.inactive-right {
+    transform: translateX(100%); /* Move inactive image out to the right */
+    z-index: 1; /* Place it behind the active image */
+}
+.buy-button {
+    position: fixed;       /* Fixes the button relative to the viewport */
+    left: 50%;             /* Centers the button horizontally */
+    bottom: 20px;          /* Distance from the bottom of the viewport */
+    transform: translateX(-50%);  /* Adjusts the button to truly center it */
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #548F72;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    z-index: 1000;         /* Keeps the button above other content */
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: pink;  /* Change the button color on hover */
 }

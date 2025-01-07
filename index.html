@@ -91,12 +91,46 @@
         </header>
     </main> 
 <body>
-    <div class="containerBox">
-        <div class="color-box2 large2">
-            <img src="Pictures/landing pic.png" alt="Magic Bloom Image">
-                <!-- <button onclick="window.location.href='shop.html'">View Now</button> -->
-        </div>
+    
+   
+<div class="containerBox">
+    <div class="color-box2 large2">
+        <img id="image1" src="Pictures/landing pic.png" alt="Magic Bloom Image" class="active">
+        <img id="image2" src="Pictures/Background.png" alt="New Magic Bloom Image" class="inactive-right">
     </div>
+</div>
+
+<script>
+    function alternateImagesWithTransition() {
+        const image1 = document.getElementById("image1");
+        const image2 = document.getElementById("image2");
+
+        let leftToRight = true; // Track the direction of the transition
+
+        // Start alternating the images every 5 seconds
+        setInterval(() => {
+            if (leftToRight) {
+                // Slide image1 out to the left, image2 in from the right
+                image1.classList.remove("active");
+                image1.classList.add("inactive-left");
+                image2.classList.remove("inactive-right");
+                image2.classList.add("active");
+            } else {
+                // Slide image2 out to the right, image1 in from the left
+                image2.classList.remove("active");
+                image2.classList.add("inactive-right");
+                image1.classList.remove("inactive-left");
+                image1.classList.add("active");
+            }
+
+            // Toggle the direction for the next transition
+            leftToRight = !leftToRight;
+        }, 5000); // Change every 5 seconds
+    }
+
+    // Start the animation
+    alternateImagesWithTransition();
+</script>
     <div class="fable-box">
         <h2 class="fable-title">Greetings and Salutations</h2>
         <div class="fable-content">

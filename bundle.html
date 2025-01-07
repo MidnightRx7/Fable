@@ -89,27 +89,510 @@
         </div>
     </header>
 </main> 
+
+
+
+
+
 <body>
-    <h1> Coming Soon</h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
-    <h1> </h1>
+    <h1> Build Your Bundle </h1>
+    <div class="size-selection">
+        <div class="size-box" id="small-box">
+            <p>Small</p>
+        </div>
+        <div class="size-box" id="large-box">
+            <p>Large</p>
+        </div>
+    </div>
+    <style>
+.size-selection {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Adds space between the two boxes */
+    margin-top: 20px;
+}
+
+.size-box {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #548F72;  /* Border color */
+    border-radius: 8px;
+    cursor: pointer;  /* Changes the cursor to a pointer */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #548F72;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition */
+}
+
+.size-box:hover {
+    background-color: #548F72;
+    color: white;  /* Changes text color on hover */
+}
+
+.selected {
+    background-color: #548F72;
+    color: white;  /* Keeps the color after selection */
+}
+
+.pink {
+    background-color: pink !important; /* Forces the box to remain pink when selected */
+    color: white; /* Makes text color white */
+}
+/* Buy Button Style */
+.buy-button {
+    display: block;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #548F72;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #4c7a5b;
+}
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const smallBox = document.getElementById('small-box');
+    const largeBox = document.getElementById('large-box');
+    const buyButton = document.getElementById('buy-button');
+   
+   
+    let selectedSize = null;  // To store the selected size (small or large)
+   
+    // Function to handle box click and change color
+    function handleBoxClick(clickedBox, category) {
+        // Check if this box has already been selected
+        if (clickedBox.classList.contains('selected')) return;  // Prevent re-selecting
+       
+        // Mark the clicked box as selected
+        clickedBox.classList.add('selected');
+        clickedBox.classList.add('pink');  // Change to pink on click
+ 
+ 
+        // Increment the selected item count for the specific category
+        if (category === 'pot') {
+            selectedProduct++;
+        } else if (category === 'plants') {
+            selectedProduct2++;
+        } else if (category === 'toys') {
+            selectedProducts++;
+        }
+       
+        updateBuyButton();
+ 
+ 
+        // Save the size selection in localStorage
+        localStorage.setItem('selectedSize', clickedBox.id);
+ 
+ 
+        // Store the selected size (small or large)
+        selectedSize = clickedBox.id === 'large-box' ? 'large' : 'small';
+    }
+ 
+ 
+    // Update Buy button visibility and functionality based on selected items
+    function updateBuyButton() {
+        const totalSelected = selectedProduct + selectedProduct2 + selectedProducts;
+ 
+ 
+        // Show the Buy Now button if 5 or more items are selected
+        if (totalSelected >= 5) {
+            buyButton.style.display = 'block';  // Show the Buy Now button
+        } else {
+            buyButton.style.display = 'none';  // Hide the button if fewer than 5 items
+        }
+    }
+ 
+    // Add event listeners to both boxes for small and large sizes
+    smallBox.addEventListener('click', function() {
+        handleBoxClick(smallBox, 'pot');  // Example: assume this represents a pot
+    });
+ 
+ 
+    largeBox.addEventListener('click', function() {
+        handleBoxClick(largeBox, 'pot');  // Example: assume this represents a pot
+    });
+ 
+    // Handle Buy Now button click and redirect to appropriate link
+    buyButton.addEventListener('click', function(e) {
+        e.preventDefault();  // Prevent default action (which is link redirection)
+        let link = 'https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/';
+ 
+ 
+        // Redirect based on the selected size (large or small)
+        if (selectedSize === 'large') {
+            link = 'https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/'; // Link for large size
+        } else if (selectedSize === 'small') {
+            link = 'https://portal.veinternational.org/buybuttons/us016132/btn/regular-succulent-kit-002/'; // Link for small size
+        }
+ 
+ 
+        if (link) {
+            window.location.href = link;  // Redirect to the appropriate link
+        }
+    });
+ 
+ 
+    // Check if there are any saved selections from localStorage (for persistence across refreshes)
+    const savedSelection = localStorage.getItem('selectedSize');
+    if (savedSelection) {
+        const savedBox = document.getElementById(savedSelection);
+        if (savedBox) {
+            savedBox.classList.add('selected');
+            savedBox.classList.add('pink');
+            selectedProduct++;  // Increase the count if there's a saved selection
+            updateBuyButton();
+        }
+    }
+ });
+ </script>
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const smallBox = document.getElementById('small-box');
+    const largeBox = document.getElementById('large-box');
+    
+    // Function to handle click on a box
+    function handleBoxClick(clickedBox) {
+        // Remove 'selected' and 'pink' class from both boxes to reset selection
+        smallBox.classList.remove('selected', 'pink');
+        largeBox.classList.remove('selected', 'pink');
+        
+        // Add 'selected' class to the clicked box to highlight it
+        clickedBox.classList.add('selected');
+
+        // Save the selection to localStorage
+        localStorage.setItem('selectedSize', clickedBox.id);
+    }
+
+    // Check localStorage for previously saved selection
+    const savedSelection = localStorage.getItem('selectedSize');
+    if (savedSelection) {
+        const savedBox = document.getElementById(savedSelection);
+        if (savedBox) {
+            savedBox.classList.add('selected');
+            // If the saved selection is pink, keep the pink color
+            if (savedBox.classList.contains('pink')) {
+                savedBox.classList.add('pink');
+            }
+        }
+    }
+
+    // Add click event listeners to each box
+    smallBox.addEventListener('click', function() {
+        handleBoxClick(smallBox); // Highlight small box
+        smallBox.classList.add('pink'); // Change the box color to pink
+    });
+
+    largeBox.addEventListener('click', function() {
+        handleBoxClick(largeBox); // Highlight large box
+        largeBox.classList.add('pink'); // Change the box color to pink
+    });
+});
+</script>
+<h1> Pots Collection </h1>
+<h2><center> Choose 1 item </center></h2>
+
+<div class="pots-container"></div> <!-- This will hold the pots -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const potsListEl = document.querySelector('.pots-container');
+        const colors = ['#548F72']; // Initial color for background
+        let selectedProduct = null;  // To track selected product
+
+        // Fetch Pots
+        fetch("./pots.json")  // Fetch the pots.json file
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(data => {
+            data.forEach((product, index) => {
+                // Check if the product is tagged as a pot
+                if (product.tags.includes('pot')) {
+                    const randomColorIndex = Math.floor(Math.random() * colors.length);
+                    const bgColor = colors[randomColorIndex]; // Random color for background
+
+                    const productHTML = `
+                    <div class="product" id="productDiv1${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden; position: relative; min-height: 305px;" data-id="${product.id}">
+                        <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
+                        <div class="product-info" style="background-color: ${bgColor}; padding: 10px 20px; width: 100%; box-sizing: border-box; margin-top: 10px; position: absolute; bottom: 0; left: 0; text-align: center;">
+                            <h1 style="margin: 0; color: white; position: relative;">${product.title}</h1>
+                        </div>
+                    </div>`;
+                    potsListEl.insertAdjacentHTML('beforeend', productHTML);  // Append the product HTML to the container
+
+                    // Add click event to toggle selection
+                    const productDiv1 = document.querySelector(`#productDiv1${index}`);
+                    const productInfo1 = productDiv1.querySelector('.product-info');
+                    productDiv1.addEventListener('click', function() {
+                        // If this product is already selected, deselect it
+                        if (selectedProduct && selectedProduct === productDiv1) {
+                            productInfo1.style.backgroundColor = '#548F72';  // Revert to initial color
+                            alert(`${product.title} was removed.`);
+                            selectedProduct = null;
+                        } else {
+                            // If there was another selected product, reset its color
+                            if (selectedProduct) {
+                                const selectedProductInfo = selectedProduct.querySelector('.product-info');
+                                selectedProductInfo1.style.backgroundColor = '#548F72';  // Reset the previous one
+                            }
+                            // Set this product as selected and change its color to pink
+                            productInfo1.style.backgroundColor = 'pink';
+                            alert(`${product.title} was picked.`);
+                            selectedProduct = productDiv1;
+                        }
+                    });
+                }
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching pots data:', error);
+            potsListEl.innerHTML = '<p style="color: red;">Failed to load pots. Please try again later.</p>';
+        });
+    });
+</script>
+
+
+
+
+
+    <h1> Succulents Collection </h1>
+    <h2><center> Choose 1 item </center></h2>
+
+    <div class="succulents-container"></div> <!-- This will hold the succulents -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const succulentsListEl = document.querySelector('.succulents-container');
+            const colors = ['#548F72']; // Initial color for background
+            let selectedProduct2 = null;  // To track selected product
+    
+            // Fetch Pots
+            fetch("./succulents.json")  // Fetch the pots.json file
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                data.forEach((product, index) => {
+                    // Check if the product is tagged as a pot
+                    if (product.tags.includes('plants')) {
+                        const randomColorIndex = Math.floor(Math.random() * colors.length);
+                        const bgColor = colors[randomColorIndex]; // Random color for background
+    
+                        const productHTML = `
+                        <div class="product" id="productDiv2${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden; position: relative; min-height: 305px;" data-id="${product.id}">
+                            <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
+                            <div class="product-info2" style="background-color: ${bgColor}; padding: 10px 20px; width: 100%; box-sizing: border-box; margin-top: 10px; position: absolute; bottom: 0; left: 0; text-align: center;">
+                                <h1 style="margin: 0; color: white; position: relative;">${product.title}</h1>
+                            </div>
+                        </div>`;
+                        succulentsListEl.insertAdjacentHTML('beforeend', productHTML);  // Append the product HTML to the container
+    
+                        // Add click event to toggle selection
+                        const productDiv2 = document.querySelector(`#productDiv2${index}`);
+                        const productInfo2 = productDiv2.querySelector('.product-info2');
+                        productDiv2.addEventListener('click', function() {
+                            // If this product is already selected, deselect it
+                            if (selectedProduct2 && selectedProduct2 === productDiv2) {
+                                productInfo2.style.backgroundColor = '#548F72';  // Revert to initial color
+                                alert(`${product.title} was removed.`);
+                                selectedProduct2 = null;
+                            } else {
+                                // If there was another selected product, reset its color
+                                if (selectedProduct2) {
+                                    const selectedProductInfo2 = selectedProduct2.querySelector('.product-info');
+                                    selectedProductInfo2.style.backgroundColor = '#548F72';  // Reset the previous one
+                                }
+                                // Set this product as selected and change its color to pink
+                                productInfo2.style.backgroundColor = 'pink';
+                                alert(`${product.title} was picked.`);
+                                selectedProduct2 = productDiv2;
+                            }
+                        });
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching pots data:', error);
+                succulentsListEl.innerHTML = '<p style="color: red;">Failed to load pots. Please try again later.</p>';
+            });
+        });
+    </script>
+
+
+
+
+
+    <h1> Accessories Collection </h1>
+    <h2><center> Choose 3 items </center></h2>
+    <div class="accessories-container"></div> <!-- This will hold the accessories -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accessoriesListEl = document.querySelector('.accessories-container');
+            const colors = ['#548F72']; // Initial color for background
+            let selectedProducts = [];  // To track selected products (up to 3)
+    
+            // Fetch Accessories
+            fetch("./accessories.json")  // Fetch the accessories.json file
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                data.forEach((product, index) => {
+                    // Check if the product is tagged as an accessory
+                    if (product.tags.includes('toys')) {
+                        const randomColorIndex = Math.floor(Math.random() * colors.length);
+                        const bgColor = colors[randomColorIndex]; // Random color for background
+    
+                        const productHTML = `
+                        <div class="product" id="productDiv${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden; position: relative; min-height: 305px;" data-id="${product.id}">
+                            <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
+                            <div class="product-info" style="background-color: ${bgColor}; padding: 10px 20px; width: 100%; box-sizing: border-box; margin-top: 10px; position: absolute; bottom: 0; left: 0; text-align: center;">
+                                <h1 style="margin: 0; color: white; position: relative;">${product.title}</h1>
+                            </div>
+                        </div>`;
+                        accessoriesListEl.insertAdjacentHTML('beforeend', productHTML);  // Append the product HTML to the container
+    
+                        // Add click event to toggle selection
+                        const productDiv = document.querySelector(`#productDiv${index}`);
+                        const productInfo = productDiv.querySelector('.product-info');
+                        productDiv.addEventListener('click', function() {
+                            // If this product is already selected, deselect it
+                            if (selectedProducts.includes(productDiv)) {
+                                productInfo.style.backgroundColor = '#548F72';  // Revert to initial color
+                                alert(`${product.title} was removed.`);
+                                selectedProducts = selectedProducts.filter(item => item !== productDiv);
+                            } else {
+                                // If there are already 3 selected products, prevent further selection
+                                if (selectedProducts.length >= 3) {
+                                    alert('You can only select up to 3 products.');
+                                    return;
+                                }
+                                // Set this product as selected and change its color to pink
+                                productInfo.style.backgroundColor = 'pink';
+                                alert(`${product.title} was picked.`);
+                                selectedProducts.push(productDiv);
+                            }
+                        });
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching accessories data:', error);
+                accessoriesListEl.innerHTML = '<p style="color: red;">Failed to load accessories. Please try again later.</p>';
+            });
+        });
+    </script>
+
+<a id="buy-button" class="buy-button" href="#" style="display: none;">Buy Now</a>
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px; /* Add some spacing from the top */
+        }
+
+        .pots-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible column layout */
+            gap: 15px;
+            justify-items: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+        }
+        .succulents-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible column layout */
+            gap: 15px;
+            justify-items: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+        }
+        .accessories-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Flexible column layout */
+            gap: 15px;
+            justify-items: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+        }
+
+        .product {
+            width: 100%;
+            max-width: 250px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .product div {
+            background-color: #548F72;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .product h1, .product p {
+            color: white;
+            margin: 0;
+        }
+    </style>
+    
+
+
+<!-- Buy Button -->
+
+    <!-- Footer -->
     <div class="footer">
-        <div class ="col-1"> 
+        <div class="col-1">
             <h3>Store</h3>
             <a href="#"> Bundle</a>
             <a href="#"> Succulent</a>
@@ -126,52 +609,42 @@
                 <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </h3>
             </div>
         </div>
-        <div class ="col-1"> 
+        <div class="col-1">
             <h3>About us</h3>
             <a href="about_us.html">Learn More</a>
             <a href="#"> Newsletter</a>
             <a href="#"> Our Mission</a>
             <a href="#">The Team</a>
         </div>
-      </div>
-      <script>
+    </div>
+
+    <script>
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', function(event) {
-        event.stopPropagation(); // Prevent the event from bubbling up to the document
+            toggle.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the event from bubbling up to the document
+                const submenu = this.nextElementSibling;
+                const icon = this.querySelector('.dropdown-icon i');
+                
+                document.querySelectorAll('.submenu').forEach(submenuItem => {
+                    if (submenuItem !== submenu) {
+                        submenuItem.classList.remove('show');
+                        submenuItem.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)";
+                    }
+                });
+                
+                submenu.classList.toggle('show');
+                icon.style.transform = submenu.classList.contains('show') ? "rotate(180deg)" : "rotate(0deg)";
+            });
+        });
 
-        const submenu = this.nextElementSibling; // Get the corresponding submenu
-        const icon = this.querySelector('.dropdown-icon i'); // Get the icon
-
-        // Close any other open submenus
-        document.querySelectorAll('.submenu').forEach(submenuItem => {
-            if (submenuItem !== submenu) {
-                submenuItem.classList.remove('show'); // Close other submenus
-                submenuItem.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)"; // Reset rotation for other icons
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown-toggle')) {
+                document.querySelectorAll('.submenu').forEach(submenu => {
+                    submenu.classList.remove('show');
+                    submenu.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)";
+                });
             }
         });
-
-        // Toggle the current submenu
-        submenu.classList.toggle('show');
-
-        // Rotate the icon based on submenu visibility
-        if (submenu.classList.contains('show')) {
-            icon.style.transform = "rotate(180deg)";
-        } else {
-            icon.style.transform = "rotate(0deg)";
-        }
-    });
-});
-
-// Close all submenus if clicked outside
-document.addEventListener('click', function(event) {
-    // Check if the click target is not inside any dropdown toggle
-    if (!event.target.closest('.dropdown-toggle')) {
-        document.querySelectorAll('.submenu').forEach(submenu => {
-            submenu.classList.remove('show'); // Close all submenus
-            submenu.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)"; // Reset rotation for all icons
-        });
-    }
-});
-        </script>
+    </script>
 </body>
 </html>
