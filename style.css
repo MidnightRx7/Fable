@@ -142,6 +142,59 @@ header {
 
     
 }
+/* Set the color for all <a> links in the navigation */
+nav ul li a {
+    color: #043C36; /* Use the same color for all links, including 'Home' */
+    text-decoration: none;
+}
+
+/* Style for dropdown buttons (Shop and About Us) */
+nav ul li button {
+    background: none; /* Remove default button background */
+    border: none; /* Remove default button border */
+    font-size: 16px; /* Match the font size */
+    color: #043C36; /* Set color for the button text */
+    padding: 0; /* Remove padding inside button */
+    cursor: pointer; /* Optional: adds pointer cursor for button */
+}
+
+/* Ensure the 'Shop' text inside the button matches the color */
+nav ul li button span {
+    color: #043C36; /* Set the color for the 'Shop' text */
+}
+
+/* Style the dropdown arrow inside the button */
+nav ul li button .dropdown-icon {
+    color: #043C36; /* Set the color of the dropdown arrow */
+    font-size: 18px; /* Adjust the arrow size if necessary */
+}
+
+/* Optional: You can also target the hover state if you want consistency there */
+nav ul li a:hover, nav ul li button:hover {
+    color: #043C36; /* Darker color on hover for all links and buttons */
+}
+
+nav ul li a, nav ul li button span {
+    font-family: Arial, sans-serif; /* Ensure consistent font family */
+    font-size: 18px; /* Set a consistent font size */
+    text-decoration: none;
+    color: #043C36; /* Set a consistent color */
+}
+
+/* For the dropdown buttons */
+nav ul li button {
+    font-size: 18px; /* Ensure buttons match the text size */
+}
+
+/* Ensure other styles are not being overridden */
+nav ul li button .dropdown-icon {
+    font-size: 18px; /* Optional: Adjust icon size if necessary */
+}
+
+/* Optional: Make sure submenu items also match the style */
+.submenu li a {
+    font-size: 16px; /* Adjust submenu font size */
+}
 
 header ul li {
     display: inline-block;
@@ -944,21 +997,4 @@ header ul .submenu li a {
     transform: translateX(100%); /* Move inactive image out to the right */
     z-index: 1; /* Place it behind the active image */
 }
-.buy-button {
-    position: fixed;       /* Fixes the button relative to the viewport */
-    left: 50%;             /* Centers the button horizontally */
-    bottom: 20px;          /* Distance from the bottom of the viewport */
-    transform: translateX(-50%);  /* Adjusts the button to truly center it */
-    padding: 15px 30px;
-    font-size: 18px;
-    background-color: #548F72;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    z-index: 1000;         /* Keeps the button above other content */
-    transition: background-color 0.3s ease;
-}
 
-.buy-button:hover {
-    background-color: pink;  /* Change the button color on hover */
-}
