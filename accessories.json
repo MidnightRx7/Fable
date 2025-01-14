@@ -125,5 +125,14 @@
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
+    },
+    {
+        "title": "Wolf",
+        "id": "Unit-Accessory",
+        "description": "more products",
+        "image": "Pictures/Products/Wolf.jpg", 
+        "price": "$4.99",
+        "tags": ["plants", "pot", "toys"],
+        "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
     }
 ]

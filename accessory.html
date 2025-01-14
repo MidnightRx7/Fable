@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Fable | Bundle </title>
+    <link rel="icon" type="image/x-icon" href = "PictorialLogo.png">
+</head>
+<main>
+    <header>
+        <div style="width: 33.33%; text-align: center;">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button class="dropdown-toggle">
+                            <span>Shop</span><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="shop.html">Shop All</a></li>
+                            <li><a href="bundle.html">Bundle</a></li>
+                            <li><a href="accessory.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button class="dropdown-toggle">
+                            <span>About Us</span><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <ul class="submenu">
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="Media.html">Social Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div style="width: 33.33%; text-align: center;">
+            <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
+        </div>
+        <div style="width: 33.33%; text-align: center;">
+            <div class="center">
+                <div class="box">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div id="searchResults" class="search-results"></div>
+                    <script> document.addEventListener('DOMContentLoaded', function () {
+                        const searchInput = document.querySelector('.box input');
+                        const searchResults = document.getElementById('searchResults');
+                        const searchBox = document.querySelector('.box');
+                        // Show search results when typing
+                        searchInput.addEventListener('input', function () {
+                            searchResults.style.display = 'block'; // Show the dropdown
+                        });
+                        // Show search results when hovering over the search bar
+                        searchBox.addEventListener('mouseenter', function () {
+                            if (searchInput.value.trim()) { // Only show results if there's text in the input
+                                searchResults.style.display = 'block';
+                            }
+                        });
+                        // Hide search results when mouse leaves the search bar
+                        searchBox.addEventListener('mouseleave', function () {
+                            searchResults.style.display = 'none'; // Hide the dropdown
+                        });
+                    
+                        // Hide search results when clicking outside of the search bar
+                        document.addEventListener('click', function (event) {
+                            if (!event.target.closest('.box')) {
+                                searchResults.style.display = 'none'; // Hide the dropdown if clicking outside
+                            }
+                        });
+                    });</script>
+                </div>    
+                <script src="search.js"></script>
+                <div class="center">
+                    <div class="cart-box">
+                        <a href="https://portal.veinternational.org/buybuttons/us016132/cart/"> <!-- Replace with your actual cart link -->
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <div class="user-box">
+                        <a href=""> <!-- Replace with your actual user link -->
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</main>
+
+<body>
+   
+    <div class="middleproducts" style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+    </div>
+</div> 
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const listEl = document.querySelector('.middleproducts');
+    const params = new URLSearchParams(window.location.search);
+    const colors = ['#548F72'];
+
+    let i = 0;
+
+    fetch("./products.json")
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return res.json();
+    })
+    .then(data => {
+        data.forEach((product, index) => {
+            // Check if the product contains the "toys" tag
+            if (product.tags.includes("toys")) {
+                const randomColorIndex = Math.floor(Math.random() * colors.length);
+                const bgColor = colors[randomColorIndex];
+
+                const productHTML = `
+                    <div class="product" id="productDiv${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden;">
+                        <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
+                        <div style="background-color: #548F72; padding: 10px; width: 100%; box-sizing: border-box; margin-top: 10px;">
+                            <h1 style="margin: 0; color: white;">${product.title}</h1>
+                            <p style="margin: 10px 0 0; color: white;">${product.price}</p>
+                        </div>
+                    </div>`;
+                listEl.insertAdjacentHTML('beforeend', productHTML);
+
+                const productDiv = document.getElementById(`productDiv${index}`);
+                productDiv.addEventListener('click', function() {
+                    window.location.href = `product.html?id=${encodeURIComponent(product.id)}`;
+                });
+
+                if ((i + 1) % 4 === 0 && i !== data.length - 1) {
+                    const breakHTML = '<div class="break" style="flex-basis: 100%; height: 0;"></div>';
+                    listEl.insertAdjacentHTML('beforeend', breakHTML);
+                }
+                i++;
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching product data:', error);
+        listEl.innerHTML = '<p style="color: red;">Failed to load products. Please try again later.</p>';
+    });
+});
+        </script>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="col-1">
+            <h3>Store</h3>
+            <a href="#"> Bundle</a>
+            <a href="#"> Succulent</a>
+            <a href="#"> Pots</a>
+            <a href="#"> Accessories</a>
+        </div>
+        <div class="col-2">
+            <h3>Contact</h3>
+            <h3>1401 Fremont Ave, South Pasadena, CA 91030</h3>
+            <h3> Fable.ca@veinternational.org</h3>
+            <!-- Logo under col-2 contact section -->
+            <div class="logo2">
+                <a href="index.html"><img src="Pictures/Logo2.png" width="200" height="130" /></a>
+                <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </h3>
+            </div>
+        </div>
+        <div class="col-1">
+            <h3>About us</h3>
+            <a href="about_us.html">Learn More</a>
+            <a href="#"> Newsletter</a>
+            <a href="#"> Our Mission</a>
+            <a href="#">The Team</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent the event from bubbling up to the document
+                const submenu = this.nextElementSibling;
+                const icon = this.querySelector('.dropdown-icon i');
+                
+                document.querySelectorAll('.submenu').forEach(submenuItem => {
+                    if (submenuItem !== submenu) {
+                        submenuItem.classList.remove('show');
+                        submenuItem.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)";
+                    }
+                });
+                
+                submenu.classList.toggle('show');
+                icon.style.transform = submenu.classList.contains('show') ? "rotate(180deg)" : "rotate(0deg)";
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown-toggle')) {
+                document.querySelectorAll('.submenu').forEach(submenu => {
+                    submenu.classList.remove('show');
+                    submenu.previousElementSibling.querySelector('.dropdown-icon i').style.transform = "rotate(0deg)";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
