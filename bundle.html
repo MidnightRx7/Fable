@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedProduct = null;  // To track selected product
 
     // Fetch Pots
-    fetch("./pots.json")  // Fetch the pots.json file
+    fetch("/resources/pots.json")  // Fetch the pots.json file
     .then(res => {
         if (!res.ok) {
             throw new Error('Network response was not ok');
@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedProduct2 = null;  // To track selected product
 
     // Fetch Succulents
-    fetch("./succulents.json")  // Fetch the succulents.json file
+    fetch("/resources/succulents.json")  // Fetch the succulents.json file
     .then(res => {
         if (!res.ok) {
             throw new Error('Network response was not ok');
@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let selectedProducts = [];  // To track selected products (up to 3)
 
     // Fetch Accessories
-    fetch("./accessories.json") // Fetch the accessories.json file
+    fetch("/resources/accessories.json") // Fetch the accessories.json file
         .then(res => {
             if (!res.ok) {
                 throw new Error('Network response was not ok');
