@@ -55,9 +55,9 @@
     },
     {
         "title": "House",
-        "id": "Unit-Accessory4",
+        "id": "Unit-Accessory",
         "description": "more products",
-        "image": "Pictures/Products/House.jpg", 
+        "image": "Pictures/Products/House.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -75,7 +75,7 @@
         "title": "Black Bear",
         "id": "Unit-Accessory6",
         "description": "more products",
-        "image": "Pictures/Products/Bear.jpg", 
+        "image": "Pictures/Products/Bear.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -102,7 +102,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory9",
         "description": "more products",
-        "image": "Pictures/Products/Bridge.jpg", 
+        "image": "Pictures/Products/Bridge.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -152,7 +152,23 @@
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
+    },
+    {
+        "title": "Raccoon",
+        "id": "Unit-Accessory15",
+        "description": "more products",
+        "image": "Pictures/Products/Raccoon.png", 
+        "price": "$4.99",
+        "tags": ["plants", "pot", "toys"],
+        "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
+    },
+    {
+        "title": "Skunk",
+        "id": "Unit-Accessory16",
+        "description": "more products",
+        "image": "Pictures/Products/new.png", 
+        "price": "$4.99",
+        "tags": ["plants", "pot", "toys"],
+        "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
     }
-
-    
 ]
