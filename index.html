@@ -203,7 +203,52 @@
     color: #F7F0D4;
     text-wrap: pretty;
     margin-bottom: 0; 
+    }
+
+@media screen and (max-width: 1024px) {
+    .fable-content5 {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .fable-section5 {
+        min-width: 100%; 
+        padding: 10px;
+    }
+ 
+    .box2 input {
+        width: 200px;            
+        height: 35px;            
+        font-size: 12px;         
+    }
+
+    .box2 a .fas {
+        font-size: 16px;         
+    }
+    .color-box2 img {
+    position: absolute;
+    width: 100%; /* Adjust the percentage for smaller/larger images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without being cropped */
+    z-index: -1; 
 }
+
+    .color-box2.large2 img {
+    position: absolute;
+    width: 100%; /* Ensure consistent size for large boxes */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    transition: transform 1s ease-in-out; /* Smooth transition */
+    z-index: 1; /* Ensure proper stacking */
+}
+.color-box2.large2 {
+    background-color: transparent; /* Ensures no background color on container */
+    grid-column: span 10; /* Large box spans two columns */       
+    grid-row: span 60; /* Large box spans two rows */
+    position: relative; /* Allows positioning of inner box */
+ }
+}
+
 
 /*
 @media screen and (max-width: 1440px) and (min-width: 900px) {
