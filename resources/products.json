@@ -3,7 +3,7 @@
         "title": "Large Succulent Kit",
         "id": "Large-Succulent-Kit",
         "description": "",
-        "image": "Pictures/Products/BundleM.png",     
+        "image": "Pictures/Products/LargeP.png",     
         "price": "$24.99",
         "tags": ["kit", "plants", "pot"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/"
@@ -12,7 +12,7 @@
         "title": "Regular Succulent Kit",
         "id": "Medium-Succulent-Kit",
         "description": "more products",
-        "image": "Pictures/Products/BundleM.png", 
+        "image": "Pictures/Products/MediumP.png", 
         "price": "$19.99",
         "tags": ["kit", "plants", "pot"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/regular-succulent-kit-002/"
@@ -55,7 +55,7 @@
     },
     {
         "title": "House",
-        "id": "Unit-Accessory",
+        "id": "Unit-Accessory4",
         "description": "more products",
         "image": "Pictures/Products/House.png", 
         "price": "$4.99",

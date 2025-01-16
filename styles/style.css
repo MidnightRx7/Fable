@@ -1044,6 +1044,49 @@ header {
     padding: 15px 20px;
     display: block;
  }
+ .fable-box5 {
+    grid-gap: 5px; 
+    padding-top: 10px;    
+    padding-bottom: 30px; 
+    grid-template-columns: auto auto auto auto;
+    max-width: 2500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #043C36;
+}
+
+.fable-title5 {
+    font-size: 36px;
+    margin-bottom: 5px; 
+    color: #F7F0D4;
+    text-align: center;
+}
+
+.fable-content5 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 5px; 
+    padding: 0;
+}
+
+.fable-section5 {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 15px; 
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px 0; 
+}
+
+.fable-section5 p {
+    font-size: 20px;
+    color: #F7F0D4;
+    text-wrap: pretty;
+    margin-bottom: 0; 
+}
+
  
 
 @media screen and (max-width: 1600px) {
@@ -2107,6 +2150,12 @@ nav ul li button .dropdown-icon svg {
     }
 }
 @media screen and (max-width: 375px) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 5; /* Large box spans two columns */       
+        grid-row: span 5; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
     header {
         width: 100%; /* Ensure the header spans the full screen width */
         padding: 25px 0; /* Keep the vertical padding */
@@ -2218,6 +2267,121 @@ nav ul li button .dropdown-icon svg {
         height: 14px; /* Adjust height */
     }
 }
+
+
+
+
+@media screen and (max-width: 2560px) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 10; /* Large box spans two columns */       
+        grid-row: span 120; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+}
+@media screen and (max-width: 1964px) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 10; /* Large box spans two columns */       
+        grid-row: span 100; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+}
+@media screen and (max-width: 1579px) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 10; /* Large box spans two columns */       
+        grid-row: span 80; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+}
+
+@media screen and (max-width: 1440px) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 10; /* Large box spans two columns */       
+        grid-row: span 70; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+}
+@media screen and (max-width: 1024px) {
+
+}
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .fable-content5 {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .fable-section5 {
+        min-width: 100%; 
+        padding: 10px;
+    }
+ 
+    .box2 input {
+        width: 200px;            
+        height: 35px;            
+        font-size: 12px;         
+    }
+
+    .box2 a .fas {
+        font-size: 16px;         
+    }
+    .color-box2 img {
+    position: absolute;
+    width: 100%; /* Adjust the percentage for smaller/larger images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits without being cropped */
+    z-index: -1; 
+}
+
+    .color-box2.large2 img {
+    position: absolute;
+    width: 100%; /* Ensure consistent size for large boxes */
+    height: auto; /* Maintain aspect ratio */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    transition: transform 1s ease-in-out; /* Smooth transition */
+    z-index: 1; /* Ensure proper stacking */
+}
+.color-box2.large2 {
+    background-color: transparent; /* Ensures no background color on container */
+    grid-column: span 10; /* Large box spans two columns */       
+    grid-row: span 60; /* Large box spans two rows */
+    position: relative; /* Allows positioning of inner box */
+ }
+}
+
+@media screen and (max-width: 768) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 10; /* Large box spans two columns */       
+        grid-row: span 20; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+
+}
+@media screen and (max-width: 425) {
+    .color-box2.large2 {
+        background-color: transparent; /* Ensures no background color on container */
+        grid-column: span 5; /* Large box spans two columns */       
+        grid-row: span 10; /* Large box spans two rows */
+        position: relative; /* Allows positioning of inner box */
+     }
+}
+@media screen and (max-width: 375) {
+}
+
+
+
+
+
+ 
+ 
 
  
  
