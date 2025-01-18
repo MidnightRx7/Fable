@@ -13,15 +13,15 @@
         <div style="width: 33.33%; text-align: center;">
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li>
                         <button class="dropdown-toggle">
                             <span>Shop</span><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <ul class="submenu">
-                            <li><a href="shop.html">Shop All</a></li>
-                            <li><a href="bundle.html">Bundle</a></li>
-                            <li><a href="accessory.html">Accessories</a></li>
+                            <li><a href="/shop/">Shop All</a></li>
+                            <li><a href="/bundle/">Bundle</a></li>
+                            <li><a href="/accessory/">Accessories</a></li>
                         </ul>
                     </li>
                     <li>
@@ -29,17 +29,17 @@
                             <span>About Us</span><span class="dropdown-icon"><i class="fas fa-chevron-down"></i></span>
                         </button>
                         <ul class="submenu">
-                            <li><a href="about_us.html">About Us</a></li>
-                            <li><a href="Media.html">Social Media</a></li>
+                            <li><a href="/about-us/">About Us</a></li>
+                            <li><a href="/media/">Social Media</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
         
         <div style="width: 33.33%; text-align: center;">
-            <a href="index.html"> <img src="Pictures/Logo2.png"width="300" height="150"/></a>
+            <a href="/"> <img src="/assets/Logo2.png"width="300" height="150"/></a>
         </div>
         <div style="width: 33.33%; text-align: center;">
             <div class="center">
@@ -92,65 +92,203 @@
             </div>
         </div>
     </header>
-</main>
+</main>  
+ 
 
 <body>
-   
-    <div class="middleproducts" style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+    <div class="container5">
+        <div class="text-section">
+            <h1 class="title">Social Media</h1>
+            <p>At Fable, we believe in staying connected with our community, and we want you to be a part of it! Follow us on Facebook, TikTok, Pinterest, and Instagram to get an inside look at what’s new, explore our latest products, and stay updated on exclusive promotions and offers. Our social media platforms are where we share exciting behind-the-scenes content, inspiring stories, and helpful tips. Whether you’re looking for inspiration, advice, or just want to keep up with what’s happening at Fable, we’ve got you covered. Don’t miss out on any of the fun—join us on our social media channels today!</p>
+        </div>
+        <div class="image-section">
+            <img src="/assets/Purple.png" alt="Image Description">
+        </div>
     </div>
-</div> 
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const listEl = document.querySelector('.middleproducts');
-    const params = new URLSearchParams(window.location.search);
-    const colors = ['#548F72'];
+    <div class="main">
+        <div class="icon fb" onclick="window.location.href='https:www.facebook.com';">
+            <i class="fa-brands fa-facebook"></i>
+            <span>Facebook</span>
+        </div>
+    
+        <div class="icon twt" onclick="window.location.href='https:instagram.com/fable.vei/';">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+        </div>
+    
+        <div class="icon lnk" onclick="window.location.href='https:www.tiktok.com';">
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+        </div>
+    
+        <div class="icon yt" onclick="window.location.href='https:www.pinterest.com/Fable_VEI/?actingBusinessId=922464073583630567';">
+            <i class="fa-brands fa-pinterest"></i>
+            <span>Pinterest</span>
+        </div>
+    </div>
 
-    let i = 0;
 
-    fetch("/resources/products.json")
-    .then(res => {
-        if (!res.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return res.json();
-    })
-    .then(data => {
-        data.forEach((product, index) => {
-            // Check if the product contains the "toys" tag
-            if (product.tags.includes("toys")) {
-                const randomColorIndex = Math.floor(Math.random() * colors.length);
-                const bgColor = colors[randomColorIndex];
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
 
-                const productHTML = `
-                    <div class="product" id="productDiv${index}" style="display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0; margin: 10px; border-radius: 8px; background-color: white; overflow: hidden;">
-                        <img src="${product.image}" alt="${product.title}" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; margin: 0;">
-                        <div style="background-color: #548F72; padding: 10px; width: 100%; box-sizing: border-box; margin-top: 10px;">
-                            <h1 style="margin: 0; color: white;">${product.title}</h1>
-                            <p style="margin: 10px 0 0; color: white;">${product.price}</p>
-                        </div>
-                    </div>`;
-                listEl.insertAdjacentHTML('beforeend', productHTML);
 
-                const productDiv = document.getElementById(`productDiv${index}`);
-                productDiv.addEventListener('click', function() {
-                    window.location.href = `product.html?id=${encodeURIComponent(product.id)}`;
-                });
+<style>
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    margin: 20px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
 
-                if ((i + 1) % 4 === 0 && i !== data.length - 1) {
-                    const breakHTML = '<div class="break" style="flex-basis: 100%; height: 0;"></div>';
-                    listEl.insertAdjacentHTML('beforeend', breakHTML);
-                }
-                i++;
-            }
-        });
-    })
-    .catch(error => {
-        console.error('Error fetching product data:', error);
-        listEl.innerHTML = '<p style="color: red;">Failed to load products. Please try again later.</p>';
-    });
-});
-        </script>
+.icon:hover {
+    width: 400px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+}
 
+.icon:hover i {
+    color: #fff;
+}
+
+.icon .fa-facebook-f {
+    color: #1A6ED8;
+}
+
+.fb:hover {
+    background: #1A6ED8;
+}
+
+.twt:hover {
+    background: #f77737;
+}
+
+.lnk:hover {
+    background: #ff0050;
+}
+
+.icon .fa-github {
+    color: #000;
+}
+
+.git:hover {
+    background: #000;
+}
+
+.icon .fa-youtube {
+    color: #FE0000;
+}
+
+.yt:hover {
+    background: #FE0000;
+}
+
+/* responsive */
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .main{
+        flex-direction: column;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container for the layout */
+.container5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px 100px; /* Add 50px padding to the left and right */
+    height: 50vh;
+    box-sizing: border-box; /* Include padding in element's dimensions */
+}
+
+/* Text section */
+.text-section {
+    width: 70%;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Make sure content starts from the top */
+    text-align: left; /* Align text to the left */
+}
+
+.title {
+    font-size: 3rem; /* Larger font size for the title */
+    margin-bottom: 20px; /* Increased space below the title */
+    color: #333;
+    text-align: left; /* Ensure the title stays on the left */
+}
+
+p {
+    font-size: 1.25rem; /* Larger font size for the text */
+    line-height: 1.8; /* Increased line height for better readability */
+    color: black;
+}
+
+/* Image section */
+.image-section {
+    width: 30%;
+    padding-left: 10px; /* Add a small space between text and image */
+}
+
+.image-section img {
+    width: 100%; /* Adjust width to make the image smaller */
+    height: auto;
+    border-radius: 44px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container5 {
+        flex-direction: column;
+        justify-content: flex-start; /* Ensure content starts from the top */
+        padding: 20px; /* Adjust padding for smaller screens */
+        height: auto; /* Allow height to grow as needed */
+    }
+
+    .text-section {
+        width: 100%;
+        padding-right: 0;
+        text-align: left; /* Keep text aligned to the left */
+    }
+
+    .image-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        width: 100%; /* Adjusted width for smaller screens */
+        height: auto;
+    }
+    .title {
+        text-align: center; /* Center the title on smaller screens */
+    }
+}
+    </style>
+   
 
     <!-- Footer -->
     <div class="footer">
@@ -167,13 +305,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3> Fable.ca@veinternational.org</h3>
             <!-- Logo under col-2 contact section -->
             <div class="logo2">
-                <a href="index.html"><img src="Pictures/Logo2.png" width="200" height="130" /></a>
+                <a href="/"><img src="/assets/Logo2.png" width="200" height="130" /></a>
                 <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </h3>
             </div>
         </div>
         <div class="col-1">
             <h3>About us</h3>
-            <a href="about_us.html">Learn More</a>
+            <a href="/about-us/">Learn More</a>
             <a href="#"> Newsletter</a>
             <a href="#"> Our Mission</a>
             <a href="#">The Team</a>

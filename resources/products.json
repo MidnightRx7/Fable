@@ -3,7 +3,7 @@
         "title": "Large Succulent Kit",
         "id": "Large-Succulent-Kit",
         "description": "",
-        "image": "Pictures/Products/LargeP.png",     
+        "image": "/assets/Products/LargeP.png",     
         "price": "$24.99",
         "tags": ["kit", "plants", "pot"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/"
@@ -12,7 +12,7 @@
         "title": "Regular Succulent Kit",
         "id": "Medium-Succulent-Kit",
         "description": "more products",
-        "image": "Pictures/Products/MediumP.png", 
+        "image": "/assets/Products/MediumP.png", 
         "price": "$19.99",
         "tags": ["kit", "plants", "pot"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/regular-succulent-kit-002/"
@@ -21,7 +21,7 @@
         "title": "Accessories Pack",
         "id": "3-Pack-Accessories",
         "description": "more products",
-        "image": "Pictures/Products/Bridges1.jpg", 
+        "image": "/assets/Products/Bridges1.jpg", 
         "price": "$12.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/3-pack-accessories-004/"
@@ -30,7 +30,7 @@
         "title": "Frog",
         "id": "Unit-Accessory1",
         "description": "more products",
-        "image": "Pictures/Products/Frog.png", 
+        "image": "/assets/Products/Frog.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -39,7 +39,7 @@
         "title": "Hedgehog",
         "id": "Unit-Accessory2",
         "description": "more products",
-        "image": "Pictures/Products/Hedgehog.png", 
+        "image": "/assets/Products/Hedgehog.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -48,7 +48,7 @@
         "title": "Owl",
         "id": "Unit-Accessory3",
         "description": "more products",
-        "image": "Pictures/Products/Owl.png", 
+        "image": "/assets/Products/Owl.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -57,7 +57,7 @@
         "title": "House",
         "id": "Unit-Accessory4",
         "description": "more products",
-        "image": "Pictures/Products/House.png", 
+        "image": "/assets/Products/House.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -66,7 +66,7 @@
         "title": "Badger",
         "id": "Unit-Accessory5",
         "description": "more products",
-        "image": "Pictures/Products/Badger.png", 
+        "image": "/assets/Products/Badger.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -75,7 +75,7 @@
         "title": "Black Bear",
         "id": "Unit-Accessory6",
         "description": "more products",
-        "image": "Pictures/Products/Bear.png", 
+        "image": "/assets/Products/Bear.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -84,7 +84,7 @@
         "title": "Brown Bear",
         "id": "Unit-Accessory7",
         "description": "more products",
-        "image": "Pictures/Products/Bear2.png", 
+        "image": "/assets/Products/Bear2.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -93,7 +93,7 @@
         "title": "Beaver",
         "id": "Unit-Accessory8",
         "description": "more products",
-        "image": "Pictures/Products/beaver.png", 
+        "image": "/assets/Products/beaver.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -102,7 +102,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory9",
         "description": "more products",
-        "image": "Pictures/Products/Bridge.png", 
+        "image": "/assets/Products/Bridge.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -111,7 +111,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory10",
         "description": "more products",
-        "image": "Pictures/Products/Bridge2.png", 
+        "image": "/assets/Products/Bridge2.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -120,7 +120,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory11",
         "description": "more products",
-        "image": "Pictures/Products/Bridge3.png", 
+        "image": "/assets/Products/Bridge3.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -130,7 +130,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory12",
         "description": "more products",
-        "image": "Pictures/Products/Bridge4.png", 
+        "image": "/assets/Products/Bridge4.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -139,7 +139,7 @@
         "title": "Bridge",
         "id": "Unit-Accessory13",
         "description": "more products",
-        "image": "Pictures/Products/Bridge5.png", 
+        "image": "/assets/Products/Bridge5.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -148,7 +148,7 @@
         "title": "Fox",
         "id": "Unit-Accessory14",
         "description": "more products",
-        "image": "Pictures/Products/Fox.png", 
+        "image": "/assets/Products/Fox.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -157,7 +157,7 @@
         "title": "Raccoon",
         "id": "Unit-Accessory15",
         "description": "more products",
-        "image": "Pictures/Products/Raccoon.png", 
+        "image": "/assets/Products/Raccoon.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -166,7 +166,7 @@
         "title": "Skunk",
         "id": "Unit-Accessory16",
         "description": "more products",
-        "image": "Pictures/Products/new.png", 
+        "image": "/assets/Products/new.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"

@@ -3,7 +3,7 @@
         "title": "Pot 1",
         "id": "Large-Succulent-Kit",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "image": "Pictures/Products/SmallP1.png",     
+        "image": "/assets/Products/SmallP1.png",     
         "price": "$24.99",
         "tags": ["kit", "plants","pot"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/large-succulent-kit-001/"
@@ -12,7 +12,7 @@
         "title": "Pot 2",
         "id": "Medium-Succulent-Kit",
         "description": "more products",
-        "image": "Pictures/Products/SmallP2.png", 
+        "image": "/assets/Products/SmallP2.png", 
         "price": "$19.99",
         "tags": ["kit", "plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/regular-succulent-kit-002/"
@@ -21,7 +21,7 @@
         "title": "Pot 3",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "Pictures/Products/BigP1.png", 
+        "image": "/assets/Products/BigP1.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -30,7 +30,7 @@
         "title": "Pot 4",
         "id": "3-Pack-Accessories",
         "description": "more products",
-        "image": "Pictures/Products/BigP2.png", 
+        "image": "/assets/Products/BigP2.png", 
         "price": "$12.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/3-pack-accessories-004/"

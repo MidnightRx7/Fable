@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
                 // Add an event listener to navigate to the result's link when clicked
                 resultItem.addEventListener('click', function () {
-                    window.location.href = `${result.title.replaceAll(' ', '_').toLowerCase()}.html`;
+                    window.location.href = `/${result.title.replaceAll(' ', '_').toLowerCase()}/`;
                     console.log("oi");
                 });
                 dropdown.appendChild(resultItem);
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             // Add an event listener to navigate to the result's link when clicked
             resultItem.addEventListener('click', function () {
-                window.location.href = `product.html?id=${result.id}`;
+                window.location.href = `/product/?id=${result.id}`;
             });
             dropdown.appendChild(resultItem);
         });

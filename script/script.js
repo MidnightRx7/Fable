@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const productDiv = document.getElementById(`productDiv${index}`);
                     productDiv.addEventListener('click', function() {
-                        window.location.href = `product.html?id=${encodeURIComponent(product.id)}`;
+                        window.location.href = `/product/?id=${encodeURIComponent(product.id)}`;
                     });
 
                     displayedCount++; // Increment the counter for displayed products
