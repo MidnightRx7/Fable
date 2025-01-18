@@ -3,7 +3,7 @@
         "title": "Succulent 1",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant1.jpg", 
+        "image": "/assets/products/Plant1.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -12,7 +12,7 @@
         "title": "Succulent 2",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant2.jpg", 
+        "image": "/assets/products/Plant2.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -21,7 +21,7 @@
         "title": "Succulent 3",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant3.jpg", 
+        "image": "/assets/products/Plant3.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -30,7 +30,7 @@
         "title": "Succulent 4",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant4.jpg", 
+        "image": "/assets/products/Plant4.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -39,7 +39,7 @@
         "title": "Succulent 5",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant5.jpg", 
+        "image": "/assets/products/Plant5.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -48,7 +48,7 @@
         "title": "Succulent 6",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant6.jpg", 
+        "image": "/assets/products/Plant6.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -57,7 +57,7 @@
         "title": "Succulent 7",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant7.jpg", 
+        "image": "/assets/products/Plant7.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
@@ -66,7 +66,7 @@
         "title": "Succulent 8",
         "id": "Unit-Accessory",
         "description": "more products",
-        "image": "/assets/products/Plant8.jpg", 
+        "image": "/assets/products/Plant8.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
