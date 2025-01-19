@@ -98,8 +98,10 @@
         <div class="sidebar" style="width: 20%;"> 
             <h1 class="sidebar-sec" style=" background-color: #A35FAB; border-radius: 15px;">Sort By:</h1>
             <div class="sidebar-sec" style=" background-color: #fff;">
-                <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Kits</p>
-                <p style="color: #A35FAB;"><input type="checkbox" name="tags"> Accessories</p>
+                <p style="color: #A35FAB;"><input type="checkbox" name="tags" value="Kits"> Kits</p>
+                <p style="color: #A35FAB;"><input type="checkbox" name="tags" value="Accessories"> Accessories</p>
+
+
             </div>
             <br>
             <div class="sidebar-sec" style="background-color: #fff;">
@@ -107,6 +109,34 @@
                 <button class="button" onclick="searchProducts()"><a>Search</a></button>
             </div>  
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const checkboxes = document.querySelectorAll('input[name="tags"]');
+                const params = new URLSearchParams(window.location.search);
+                
+                checkboxes.forEach(checkbox => {
+                    const value = checkbox.value;
+                    if (params.has('tags') && params.get('tags').split(',').includes(value)) {
+                        checkbox.checked = true;
+                    }
+                });
+            });
+                function clearSelection() {
+                    const checkboxes = document.querySelectorAll('input[name="tags"]:checked');
+                    checkboxes.forEach(checkbox => {
+                        checkbox.checked = false;
+                    });
+                }
+                // Other parts of your existing script...
+                function searchProducts() {
+                    const checkboxes = document.querySelectorAll('input[name="tags"]:checked');
+                    const selectedTags = Array.from(checkboxes).map(checkbox => checkbox.value);
+                    const searchLink = `./?tags=${selectedTags.join(',')}`;
+                    window.location.href = searchLink;
+                }
+        
+                // ... Rest of your script ..
+        </script>
         <div class="middleproducts" style="height: fit-content; width: 100%; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
         </div>
     </div> 

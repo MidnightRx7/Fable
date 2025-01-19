@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
         data.forEach((product, index) => {
             // Check if the product contains the "toys" tag
-            if (product.tags.includes("toys")) {
+            if (product.tags.includes("Accessories")) {
                 const randomColorIndex = Math.floor(Math.random() * colors.length);
                 const bgColor = colors[randomColorIndex];
 
