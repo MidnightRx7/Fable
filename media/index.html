@@ -84,11 +84,11 @@
                             <i class="fas fa-shopping-cart"></i>
                         </a>
                     </div>
-                    <div class="user-box">
-                        <a href=""> <!-- Replace with your actual user link -->
+                    <!-- <div class="user-box">
+                        <a href=""> 
                             <i class="fas fa-user"></i>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -100,32 +100,36 @@
     <div class="container5">
         <div class="text-section">
             <h1 class="title">Social Media</h1>
-            <p>At Fable, we believe in staying connected with our community, and we want you to be a part of it! Follow us on Facebook, TikTok, Pinterest, and Instagram to get an inside look at what’s new, explore our latest products, and stay updated on exclusive promotions and offers. Our social media platforms are where we share exciting behind-the-scenes content, inspiring stories, and helpful tips. Whether you’re looking for inspiration, advice, or just want to keep up with what’s happening at Fable, we’ve got you covered. Don’t miss out on any of the fun—join us on our social media channels today!</p>
+            <p>At Fable, we believe in staying connected with our community, and we want you to be a part of it! Follow us on Instagram and Pinterest to get an inside look at what’s new, explore our latest products, and stay updated on exclusive promotions and offers. Our social media platforms are where we share exciting behind-the-scenes content, inspiring stories, and helpful tips. Whether you’re looking for inspiration, advice, or just want to keep up with what’s happening at Fable, we’ve got you covered. Don’t miss out on any of the fun—join us on our social media channels today!</p>
         </div>
         <div class="image-section">
             <img src="/assets/Purple.png" alt="Image Description">
         </div>
     </div>
     <div class="main">
-        <div class="icon fb" onclick="window.location.href='https:www.facebook.com';">
+        <!-- <div class="icon fb" onclick="window.location.href='https:www.facebook.com';">
             <i class="fa-brands fa-facebook"></i>
             <span>Facebook</span>
-        </div>
+        </div> -->
     
-        <div class="icon twt" onclick="window.location.href='https:instagram.com/fable.vei/';">
+        <a href="https://instagram.com/fable.vei/" class="icon twt">
             <i class="fa-brands fa-instagram"></i>
             <span>Instagram</span>
-        </div>
-    
+        </a>
+        <a href="https:www.pinterest.com/Fable_VEI/?actingBusinessId=922464073583630567" class="icon yt">
+            <i class="fa-brands fa-pinterest"></i>
+            <span>Pintrest</span>
+        </a>
+<!--     
         <div class="icon lnk" onclick="window.location.href='https:www.tiktok.com';">
             <i class="fa-brands fa-tiktok"></i>
             <span>TikTok</span>
-        </div>
+        </div> -->
     
-        <div class="icon yt" onclick="window.location.href='https:www.pinterest.com/Fable_VEI/?actingBusinessId=922464073583630567';">
+        <!-- <div class="icon yt" onclick="window.location.href='https:www.pinterest.com/Fable_VEI/?actingBusinessId=922464073583630567';">
             <i class="fa-brands fa-pinterest"></i>
             <span>Pinterest</span>
-        </div>
+        </div> -->
     </div>
 
 
@@ -136,6 +140,14 @@
 
 
 <style>
+a.icon {
+    text-decoration: none; /* Removes underline */
+    color: black;        /* Inherits the color from the parent element or sets it to default */
+}
+
+a.icon:hover {
+    color: white; /* Ensures no color change on hover */
+}
 .main{
     width: 100%;
     display: flex;
@@ -179,7 +191,7 @@
 }
 
 .twt:hover {
-    background: #f77737;
+    background: linear-gradient(45deg, #962fbf, #d62976, #fa7e1e, #feda75);
 }
 
 .lnk:hover {
@@ -293,12 +305,12 @@ p {
 
     <!-- Footer -->
     <div class="footer">
-        <div class="col-1">
+        <div class ="col-1"> 
             <h3>Store</h3>
-            <a href="#"> Bundle</a>
-            <a href="#"> Succulent</a>
-            <a href="#"> Pots</a>
-            <a href="#"> Accessories</a>
+            <a href="/shop/"> Shop All</a>
+            <a href="/bundle/"> Bundle</a>
+            <!-- <a href="#"> Pots</a> -->
+            <a href="/accessory/"> Accessories</a>
         </div>
         <div class="col-2">
             <h3>Contact</h3>
@@ -307,17 +319,17 @@ p {
             <!-- Logo under col-2 contact section -->
             <div class="logo2">
                 <a href="/"><img src="/assets/Logo2.png" width="200" height="130" /></a>
-                <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only.</u> </h3>
+                <h3> <u>Disclaimer: This Virtual Enterprise online store is for educational purposes only. (2024-2025 - Fable)</u> </h3>
             </div>
         </div>
-        <div class="col-1">
+        <div class ="col-1"> 
             <h3>About us</h3>
             <a href="/about-us/">Learn More</a>
-            <a href="#"> Newsletter</a>
-            <a href="#"> Our Mission</a>
-            <a href="#">The Team</a>
+            <!-- <a href="#"> Newsletter</a> -->
+            <a href=""> Our Mission</a>
+            <a href="/about-us/">The Team</a>
         </div>
-    </div>
+      </div>
 
     <script>
         document.querySelectorAll('.dropdown-toggle').forEach(toggle => {

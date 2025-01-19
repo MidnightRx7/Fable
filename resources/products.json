@@ -93,7 +93,7 @@
         "title": "Beaver",
         "id": "Unit-Accessory8",
         "description": "more products",
-        "image": "/assets/products/beaver.png", 
+        "image": "/assets/products/Beaver.png", 
         "price": "$4.99",
         "tags": ["plants", "pot", "toys"],
         "button": "https://portal.veinternational.org/buybuttons/us016132/btn/unit-accessory-003/"
