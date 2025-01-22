@@ -110,6 +110,20 @@
             </div>  
         </div>
         <script>
+            function removeSidebar() {
+                if (window.innerWidth <= 635) {
+                    const sidebar = document.querySelector('.sidebar');
+                    if (sidebar) {
+                        sidebar.remove(); // Removes the sidebar from the DOM
+                    }
+                }
+            }
+        
+            // Run the function on page load and whenever the window is resized
+            window.addEventListener('load', removeSidebar);
+            window.addEventListener('resize', removeSidebar);
+        </script>
+        <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const checkboxes = document.querySelectorAll('input[name="tags"]');
                 const params = new URLSearchParams(window.location.search);

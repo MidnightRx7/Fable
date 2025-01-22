@@ -2107,13 +2107,9 @@ nav ul li button .dropdown-icon svg {
         height: 14px; /* Adjust height */
     }
 }
-@media screen and (max-width: 375px) {
-    .color-box2.large2 {
-        background-color: transparent; /* Ensures no background color on container */
-        grid-column: span 5; /* Large box spans two columns */       
-        grid-row: span 5; /* Large box spans two rows */
-        position: relative; /* Allows positioning of inner box */
-     }
+@media screen and (max-width: 425px) {
+
+
     header {
         width: 100%; /* Ensure the header spans the full screen width */
         padding: 25px 0; /* Keep the vertical padding */
@@ -2137,7 +2133,7 @@ nav ul li button .dropdown-icon svg {
 
     /* Adjust spacing for navigation items */
     header ul li {
-        margin: 4px; /* Increased margin for spacing */
+        margin: 10px; /* Increased margin for spacing */
     }
 
     /* Adjust cart and user icon positioning */
@@ -2153,9 +2149,6 @@ nav ul li button .dropdown-icon svg {
     }
     nav ul li a, nav ul li button span {
         margin: 25px; /* Increased margin for spacing */
-
-        
-       
      }
 
     /* Adjust icon size */
@@ -2276,17 +2269,23 @@ nav ul li button .dropdown-icon svg {
      }
 
 }
-@media screen and (max-width: 425) {
-    .color-box2.large2 {
-        background-color: transparent; /* Ensures no background color on container */
-        grid-column: span 5; /* Large box spans two columns */       
-        grid-row: span 10; /* Large box spans two rows */
-        position: relative; /* Allows positioning of inner box */
-     }
-}
-@media screen and (max-width: 375) {
-}
+@media screen and (max-width: 900px) {
+    .footer {
+        flex-direction: column;  /* Stack the columns vertically */
+        align-items: center;     /* Center the columns */
+    }
 
+    .footer .col-1, .footer .col-2 {
+        flex: none;              /* Prevent columns from stretching */
+        width: 100%;             /* Make columns take full width */
+        padding: 20px 0;
+    }
+
+    .footer .logo2 img {
+        width: 150px;  /* Adjust logo size for smaller screens */
+        height: auto;
+    }
+}
 
 
 
