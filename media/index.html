@@ -319,6 +319,117 @@ p {
             height: auto;
         }
     }
+    @media screen and (max-width: 425px) {
+
+
+header {
+    width: 100%; /* Ensure the header spans the full screen width */
+    padding: 25px 0; /* Keep the vertical padding */
+    display: flex;
+    justify-content: space-between; /* Spread the content evenly */
+    align-items: center; /* Vertically center content */
+}
+
+/* Modify individual divs to handle more flexible layout */
+header > div {
+    width: auto; /* Make each section auto width */
+    flex: 1; /* Allow sections to expand and fill space evenly */
+    
+}
+
+/* Adjust logo image size */
+header > div:nth-child(2) img {
+    width: 100px; /* Adjust logo size for larger screens */
+    height: auto;
+}
+
+/* Adjust spacing for navigation items */
+header ul li {
+    margin: 10px; /* Increased margin for spacing */
+}
+
+/* Adjust cart and user icon positioning */
+.cart-box, .user-box {
+    margin-right: 15px; /* Ensure spacing for cart/user icons */
+    padding: 0;
+}
+/* Reduce padding around the icons */
+
+/* Reduce font size for icons and text */
+header ul li a, header ul li button span {
+    font-size: 10px; /* Smaller font size */
+}
+nav ul li a, nav ul li button span {
+    margin: 25px; /* Increased margin for spacing */
+ }
+
+/* Adjust icon size */
+
+/* Adjust the size of SVG arrows imported from Cloudflare */
+/* Ensure all icon sizes are consistent */
+nav ul li button .dropdown-icon i, 
+nav ul li button .dropdown-icon svg {
+font-size: 0px; /* Adjust for font-based icons */
+width: 0px; /* Adjust for SVGs */
+height: 0px; /* Adjust for SVGs */
+}
+.center .box input {
+font-size: 14px;  /* Smaller font for input text */
+}
+
+/* Adjusting the font size of placeholder text */
+.center .box input::placeholder {
+font-size: 0px;  /* Smaller font for placeholder text */
+}
+.center {
+display: flex;
+gap: 8px;  /* Decrease the gap between cart and user icons */
+}
+
+/* Or, if the icons are inside separate elements and spaced with margin: */
+.cart-box {
+margin-right: 0px;  /* Reduce margin to pull cart and user closer */
+}
+
+.user-box {
+margin-left: 0px; /* Remove any left margin for user icon */
+}
+
+/* Make the search bar smaller */
+.box {
+    padding: 8px 12px; /* Reduced padding */
+    height: 4px; /* Smaller height */
+}
+
+.box input {
+    width: 12px; /* Reduce the width of the search bar */
+    height: 6px; /* Reduced height */
+    font-size: 1px; /* Smaller font size for the input */
+}
+
+/* Adjust the font size of the search icon */
+.box a .fas {
+    height: 14px; /* Adjust height */
+    font-size: 4px; /* Smaller icon size */
+}
+
+/* Adjust the dropdown results box */
+#searchResults {
+    width: 100%; /* Matches width of the .box container */
+}
+
+/* Adjust the cart and user icon size */
+.cart-box, .user-box {
+    width: 4px;  /* Adjust width */
+    height: 4px; /* Adjust height */
+    padding: 8px; /* Adjust padding */
+}
+
+.cart-box a .fas, .user-box a .fas {
+    font-size: 4px; /* Smaller icon size */
+    height: 14px; /* Adjust height */
+}
+}
     
       </style>
    
