@@ -42,16 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
             listEl.innerHTML = '<p style="color: red;">Failed to load products. Please try again later.</p>';
         });
 });
-
-    function removeLargeBox() {
-        if (window.innerWidth <= 424) {
-            const largeBox = document.querySelector('.color-box2.large2');
-            if (largeBox) {
-                largeBox.remove(); // Removes the element from the DOM
-            }
-        }
-    }
-
-    // Run the function on page load and whenever the window is resized
-    window.addEventListener('load', removeLargeBox);
-    window.addEventListener('resize', removeLargeBox);
